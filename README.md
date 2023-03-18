@@ -7,7 +7,7 @@ Repositório para post de atividades em sala de aula
 <summary> Diagrama UML </summary>
 <br>  
 
-![UML Firearm](https://user-images.githubusercontent.com/111443621/226129733-82e35368-a9c3-4269-b2d2-916924033fff.png)
+![Classe UML v1p3](https://user-images.githubusercontent.com/111443621/226141632-bd0eb4d7-2962-4130-b94f-97eb087866ee.png)
 
 </details>
 
