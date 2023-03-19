@@ -3,8 +3,7 @@ package Classes;
 import java.util.Scanner;
 
 public class Carregador {
-    static Scanner leia = new Scanner(System.in);
-    static int resp;
+    static Scanner leia = new Scanner(System.in); 
 
     String corTransportador;
     String tipoAlinhamento;
@@ -13,6 +12,7 @@ public class Carregador {
     Municao tipoMunicao;
 
     public static Integer carregar(int qtdMunicao, int capacidade) {
+        int resp;
         System.out.println("\nvc tem " + qtdMunicao + " munições");
         System.out.println("Deseja encher o carregador?");
         System.out.println("1 - sim");
@@ -27,6 +27,7 @@ public class Carregador {
     }
 
     public static Integer descarregar(int qtdMunicao) {
+        int resp;
         System.out.println("\nVocê tem " + qtdMunicao + " munições");
         System.out.println("Deseja esvaziar o carregador?");
         System.out.println("1 - sim");

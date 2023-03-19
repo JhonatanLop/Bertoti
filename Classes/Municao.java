@@ -6,7 +6,7 @@ public class Municao {
     
     String calibre;
     String tipoPonta;
-    String tipo_municao;
+    String tipoMunicao;
     // em gramas
     double peso;
     // em m/s
@@ -19,7 +19,7 @@ public class Municao {
     //     System.out.println("Tipo de ponta: ");
     //     municao.tipoPonta = leia.next();
     //     System.out.println("Tipo de munição: ");
-    //     municao.tipo_municao = leia.next();
+    //     municao.tipoMunicao = leia.next();
     //     System.out.println("Peso (em gramas): ");
     //     municao.peso = leia.nextDouble();
     //     System.out.println("Velocidade do projétil (m/s): ");
@@ -35,7 +35,7 @@ public class Municao {
         System.out.println("Tipo de ponta: ");
         municao.tipoPonta = leia.next();
         System.out.println("Tipo de munição: ");
-        municao.tipo_municao = leia.next();
+        municao.tipoMunicao = leia.next();
         System.out.println("Peso (em gramas): ");
         municao.peso = leia.nextDouble();
         System.out.println("Velocidade do projétil (m/s): ");
