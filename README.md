@@ -7,7 +7,8 @@ Repositório para post de atividades em sala de aula
 <summary> Diagrama UML </summary>
 <br>  
 
-![Classe UML v1p3](https://user-images.githubusercontent.com/111443621/226141632-bd0eb4d7-2962-4130-b94f-97eb087866ee.png)
+![Classe UML V1p4](https://user-images.githubusercontent.com/111443621/226183432-83c047ea-1cd9-4d66-b0fb-29048be6b314.png)
 
+> V1.4.1
 </details>
 
