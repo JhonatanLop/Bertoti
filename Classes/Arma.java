@@ -1,7 +1,8 @@
 package Classes;
 
 public class Arma {
-    String material_cano;
+    String tipo;
+    String marca;
     double peso;
     double alcance;
     double tamanho;
