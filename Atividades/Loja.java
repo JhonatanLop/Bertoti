@@ -10,7 +10,7 @@ public class Loja {
         return true;
     }
 
-    public List cadastrarUsuario(String email) {
+    public List<Usuario> cadastrarUsuario(String email) {
         if (verificarUsuario(email)) {
             usuarios.add(new Usuario());
         }
