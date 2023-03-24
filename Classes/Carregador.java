@@ -11,7 +11,7 @@ public class Carregador {
     int qtdMunicao;
     Municao tipoMunicao;
 
-    public static Integer carregar(int qtdMunicao, int capacidade) {
+    public Integer carregar(int qtdMunicao, int capacidade) {
         int resp;
         System.out.println("\nvc tem " + qtdMunicao + " munições");
         System.out.println("Deseja encher o carregador?");
@@ -26,7 +26,7 @@ public class Carregador {
         return qtdMunicao;
     }
 
-    public static Integer descarregar(int qtdMunicao) {
+    public Integer descarregar(int qtdMunicao) {
         int resp;
         System.out.println("\nVocê tem " + qtdMunicao + " munições");
         System.out.println("Deseja esvaziar o carregador?");
@@ -44,6 +44,18 @@ public class Carregador {
         return qtdMunicao;
     }
 
+    // construtor do carregador
+    public Carregador() {
+        System.out.println("Cor do transportador:");
+        corTransportador = leia.next();
+        System.out.println("Tipo do carregador:");
+        tipoAlinhamento = leia.next();
+        System.out.println("Capacidade:");
+        capacidade = leia.nextInt();
+        System.out.println("Quantidade de munições atual:");
+        qtdMunicao = leia.nextInt();
+    }
+
     // public static Carregador cadastrarCarregador() {
     //     Carregador magazineCarregador = new Carregador();
     //     System.out.println("Cor do transportador:");
@@ -57,20 +69,20 @@ public class Carregador {
     //     return magazineCarregador;
     // }
 
-    public static void main(String[] args) {
-        Carregador newMag = new Carregador();
-            System.out.println("Cor do transportador:");
-            newMag.corTransportador = leia.next();
-            System.out.println("Tipo do carregador:");
-            newMag.tipoAlinhamento = leia.next();
-            System.out.println("Capacidade:");
-            newMag.capacidade = leia.nextInt();
-            System.out.println("Quantidade de munições atual:");
-            newMag.qtdMunicao = leia.nextInt();
-            // tipoMunicao = objeto da classe Municao;
-            // newMag.tipoMunicao = municao;
+    // public static void main(String[] args) {
+    //     Carregador newMag = new Carregador();
+    //         System.out.println("Cor do transportador:");
+    //         newMag.corTransportador = leia.next();
+    //         System.out.println("Tipo do carregador:");
+    //         newMag.tipoAlinhamento = leia.next();
+    //         System.out.println("Capacidade:");
+    //         newMag.capacidade = leia.nextInt();
+    //         System.out.println("Quantidade de munições atual:");
+    //         newMag.qtdMunicao = leia.nextInt();
+    //         // tipoMunicao = objeto da classe Municao;
+    //         // newMag.tipoMunicao = municao;
 
-        newMag.qtdMunicao = carregar(newMag.qtdMunicao, newMag.capacidade);
-        newMag.qtdMunicao = descarregar(newMag.qtdMunicao);
-    }
+    //     newMag.qtdMunicao = carregar(newMag.qtdMunicao, newMag.capacidade);
+    //     newMag.qtdMunicao = descarregar(newMag.qtdMunicao);
+    // }
 }
