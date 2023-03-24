@@ -12,6 +12,10 @@ public class Municao {
     // em m/s
     int velocidade;
 
+    // criando construtor
+    public Municao() {
+        
+    }
     // public static Municao cadastrarMunicao() {
     //     Municao municao = new Municao();
     //     System.out.println("Calibre: ");
@@ -27,18 +31,18 @@ public class Municao {
     //     return municao;
     // }
 
-    public static void main(String[] args) {
-        // Municao newBullet = cadastrarMunicao();
-        Municao municao = new Municao();
-        System.out.println("Calibre: ");
-        municao.calibre = leia.next();
-        System.out.println("Tipo de ponta: ");
-        municao.tipoPonta = leia.next();
-        System.out.println("Tipo de munição: ");
-        municao.tipoMunicao = leia.next();
-        System.out.println("Peso (em gramas): ");
-        municao.peso = leia.nextDouble();
-        System.out.println("Velocidade do projétil (m/s): ");
-        municao.velocidade = leia.nextInt();
-    }
+    // public static void main(String[] args) {
+    //     // Municao newBullet = cadastrarMunicao();
+    //     Municao municao = new Municao();
+    //     System.out.println("Calibre: ");
+    //     municao.calibre = leia.next();
+    //     System.out.println("Tipo de ponta: ");
+    //     municao.tipoPonta = leia.next();
+    //     System.out.println("Tipo de munição: ");
+    //     municao.tipoMunicao = leia.next();
+    //     System.out.println("Peso (em gramas): ");
+    //     municao.peso = leia.nextDouble();
+    //     System.out.println("Velocidade do projétil (m/s): ");
+    //     municao.velocidade = leia.nextInt();
+    // }
 }
