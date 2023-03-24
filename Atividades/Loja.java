@@ -10,9 +10,13 @@ public class Loja {
         return true;
     }
 
-    public void cadastrarUsuário(String email) {
+    public List cadastrarUsuario(String email) {
         if (verificarUsuario(email)) {
             usuarios.add(new Usuario());
         }
+        return usuarios;
+    }
+    public static void main(String[] args) {
+        // cadastrarUsuario();
     }
 }
