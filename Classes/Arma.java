@@ -39,6 +39,7 @@ public class Arma {
     }
     
     public Arma () {
+        System.out.println("--------Arma--------");
         System.out.println("Tipo de arma:");
         tipo = leia.nextLine();
         System.out.println("Qual à marca:");
@@ -53,6 +54,7 @@ public class Arma {
 
     public static void main(String[] args) {
         // usar como parâmetro um objeto da classe Carregador
+        Municao newBullet = new Municao();
         Carregador newMag = new Carregador();
         Arma newGun = new Arma();
         

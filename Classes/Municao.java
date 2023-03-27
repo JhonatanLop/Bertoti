@@ -14,7 +14,17 @@ public class Municao {
 
     // criando construtor
     public Municao() {
-        
+        System.out.println("------Munição------");
+        System.out.println("Qual o calibre?");
+        calibre = leia.nextLine();
+        System.out.println("Tipo de Ponta");
+        tipoPonta = leia.nextLine();
+        System.out.println("Tipo de Munição");
+        tipoMunicao = leia.nextLine();
+        System.out.println("Gramagem da munição");
+        peso = leia.nextDouble();
+        System.out.println("Velocidade do projétil");
+        velocidade = leia.nextInt();
     }
     // public static Municao cadastrarMunicao() {
     //     Municao municao = new Municao();

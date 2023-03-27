@@ -11,7 +11,7 @@ public class Carregador {
     int qtdMunicao;
     Municao tipoMunicao;
 
-    public Integer carregar(int qtdMunicao, int capacidade) {
+    public Integer carregar(int qtdMunicao, int capacidade, Municao tipoMunicao) {
         int resp;
         System.out.println("\nvc tem " + qtdMunicao + " munições");
         System.out.println("Deseja encher o carregador?");
@@ -46,6 +46,7 @@ public class Carregador {
 
     // construtor do carregador
     public Carregador() {
+        System.out.println("------Carregador------");
         System.out.println("Cor do transportador:");
         corTransportador = leia.next();
         System.out.println("Tipo do carregador:");
