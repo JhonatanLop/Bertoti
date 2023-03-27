@@ -46,6 +46,9 @@ public class Carregador {
 
     // construtor do carregador
     public Carregador() {
+        // criando munição
+        Municao newBullet = new Municao();
+        
         System.out.println("------Carregador------");
         System.out.println("Cor do transportador:");
         corTransportador = leia.next();
@@ -55,6 +58,7 @@ public class Carregador {
         capacidade = leia.nextInt();
         System.out.println("Quantidade de munições atual:");
         qtdMunicao = leia.nextInt();
+        tipoMunicao = newBullet;
     }
 
     // public static Carregador cadastrarCarregador() {

@@ -53,11 +53,12 @@ public class Arma {
     }
 
     public static void main(String[] args) {
-        // usar como parâmetro um objeto da classe Carregador
-        Municao newBullet = new Municao();
+        // criando carregador
         Carregador newMag = new Carregador();
+        // criando arma
         Arma newGun = new Arma();
         
+        // chamando método da classe Arma
         newGun.atirar(newMag.qtdMunicao);
     }
 }
