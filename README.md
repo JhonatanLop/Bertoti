@@ -12,7 +12,7 @@ Repositório para post de atividades em sala de aula
 > V1.4.1
 </details>
 
-lembrete de melhorias
+## lembrete de melhorias
 > 28/03/2023
 
 1. Adicionar método para calculo de peso total da arma em tempo real.
