@@ -1,13 +1,25 @@
 # Bertoti
-Repositório para post de atividades em sala de aula
+> Engenharia de Software
 
-## **Diagrama de classes**
-> 18/03/2023
+## Definição de Engenharia de Software
+Engenharia de software é a área profissional responsável pela criação, manutenção e desenvolvimento de sistemas.<br>
+Os profissionais da área atuam na realização de análises, coletas e processamento de dados, identificando falhas<br>
+e desvios na operação destes produtos, para, a partir daí, otimizar sua performance.<br>
+
+### <u>Tema da atividade individual:</u>
+Armas de fogo!
+
+### <u>Casos de uso</u>
+As classes descrevem detalhes e peças de uma arma de fogo, seus métodos descrevem seus funcionamentos.<br>
+Uma arma de fogo é usada de várias formas, de início como arma de guerra. Hoje pode ser usada como uma ferramenta<br>
+ou um meio de se defender de uma opressão externa.<br>
+> Atualmente, o Estatuto do Desarmamento (Lei 10.826/03) proíbe a venda de arma de fogo ao cidadão comum com menos de 25 anos de idade.
+
 <details>
-<summary> Diagrama UML </summary>
+<summary> Diagrama UML da atividade </summary>
 <br>  
 
-![Classe UML V1p4](https://user-images.githubusercontent.com/111443621/226183432-83c047ea-1cd9-4d66-b0fb-29048be6b314.png)
+![UML Bertoti](https://user-images.githubusercontent.com/111443621/229325459-a6142ec7-a53a-42b8-9da7-05361be63bce.png)
 
 > V1.4.1
 </details>
