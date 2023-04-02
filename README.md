@@ -21,4 +21,13 @@ ou um meio de se defender de uma opressão externa.<br>
 
 ![UML Bertoti](https://user-images.githubusercontent.com/111443621/229325459-a6142ec7-a53a-42b8-9da7-05361be63bce.png)
 
+> V1.4.1
 </details>
+
+## lembrete de melhorias
+> 28/03/2023
+
+1. Adicionar método para calculo de peso total da arma em tempo real.
+2. Melhorar a experiência do usuário
+3. Adicionar, se possível, métodos de manipulação da arma
+4. Adicionar, se viável, menu interativo de ações
