@@ -1,10 +1,4 @@
 # Bertoti
-<<<<<<< Updated upstream
-Repositório para post de atividades em sala de aula
-
-## **Diagrama de classes**
-> 18/03/2023
-=======
 > Engenharia de Software
 
 ## Definição de Engenharia de Software
@@ -21,12 +15,10 @@ Uma arma de fogo é usada de várias formas, de início como arma de guerra. Hoj
 ou um meio de se defender de uma opressão externa.<br>
 > Atualmente, o Estatuto do Desarmamento (Lei 10.826/03) proíbe a venda de arma de fogo ao cidadão comum com menos de 25 anos de idade.
 
->>>>>>> Stashed changes
 <details>
-<summary> Diagrama UML </summary>
+<summary> Diagrama UML da atividade </summary>
 <br>  
 
-![Classe UML v1p3](https://user-images.githubusercontent.com/111443621/226141632-bd0eb4d7-2962-4130-b94f-97eb087866ee.png)
+![UML Bertoti](https://user-images.githubusercontent.com/111443621/229325459-a6142ec7-a53a-42b8-9da7-05361be63bce.png)
 
 </details>
-
