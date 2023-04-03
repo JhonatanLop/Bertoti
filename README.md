@@ -15,6 +15,15 @@ Uma arma de fogo é usada de várias formas, de início como arma de guerra. Hoj
 ou um meio de se defender de uma opressão externa.<br>
 > Atualmente, o Estatuto do Desarmamento (Lei 10.826/03) proíbe a venda de arma de fogo ao cidadão comum com menos de 25 anos de idade.
 
+Essas classes junto com seus métodos descrevem oque acontece com a ferramenta quando uma pessoa se depara em uma<br>
+situação que é necessário usar a ferramenta.
+<br>
+Que casos são esses?
+<br>
+Em casos de agressão ou roubo a mão armada, o cidadão tem direito de responder a ameaça a altura.<br>
+Situações onde líderes de nação encontram petróleo em outros países, são mobilizado tropas para promover<br>
+liberdade.<br>
+
 <details>
 <summary> Diagrama UML da atividade </summary>
 <br>  
