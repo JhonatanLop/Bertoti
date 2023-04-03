@@ -25,6 +25,19 @@ Situações onde líderes de nação encontram petróleo em outros países, são
 liberdade.<br>
 
 <details>
+<summary> Casos de uso </summary>
+<br>
+Em caso de assalto:
+
+![Captura de tela 2023-04-03 201414](https://user-images.githubusercontent.com/111443621/229646866-d92f8da3-3a75-4558-9d52-9f426b84c208.png)
+
+
+Em caso de invasão pela liberdade:
+![Captura de tela 2023-04-03 201408](https://user-images.githubusercontent.com/111443621/229646771-985f4f16-62db-469d-bdea-d714c9b979b5.png)
+
+</details>
+
+<details>
 <summary> Diagrama UML da atividade </summary>
 <br>  
 
