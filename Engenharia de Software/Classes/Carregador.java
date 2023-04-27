@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Carregador {
     static Scanner leia = new Scanner(System.in); 
 
+    String marca;
     String corTransportador;
     String tipoAlinhamento;
     int capacidade;
@@ -50,10 +51,12 @@ public class Carregador {
         Municao newBullet = new Municao();
         
         System.out.println("------Carregador------");
+        System.out.println("Qual é a marca?");
+        marca = leia.nextLine();
         System.out.println("Cor do transportador:");
         corTransportador = leia.next();
         System.out.println("Tipo do carregador:");
-        tipoAlinhamento = leia.next();
+        tipoAlinhamento = leia.nextLine();
         System.out.println("Capacidade:");
         capacidade = leia.nextInt();
         System.out.println("Quantidade de munições atual:");

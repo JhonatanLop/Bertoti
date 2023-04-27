@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Arma {
     static Scanner leia = new Scanner(System.in);
 
+    String nome;
     String tipo;
     String marca;
     double peso;
@@ -40,6 +41,8 @@ public class Arma {
     
     public Arma () {
         System.out.println("--------Arma--------");
+        System.out.println("Nome da arma:");
+        nome = leia.nextLine();
         System.out.println("Tipo de arma:");
         tipo = leia.nextLine();
         System.out.println("Qual à marca:");
