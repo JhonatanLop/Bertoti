@@ -1,6 +1,12 @@
 package Classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
+import Classes.fabricaveis.Arma;
+import Classes.fabricaveis.Carregador;
+import Classes.fabricaveis.Municao;
 
 public class Personagem {
     Scanner leia = new Scanner(System.in);
@@ -8,13 +14,15 @@ public class Personagem {
     String nome;
     int idade;
     Double dinheiro;
-    Arma arma;
+    List<Arma> armas = new ArrayList<Arma>();
+    List<Carregador> carregadores = new ArrayList<Carregador>();
+    List<Municao> municoes = new ArrayList<Municao>();
 
-    public Personagem(String nome, int idade, Double dinheiro, Arma arma) {
+
+    public Personagem(String nome, int idade, Double dinheiro) {
         this.nome = nome;
         this.idade = idade;
         this.dinheiro = dinheiro;
-        this.arma = arma;
     }
 
     public Personagem criarPersonagem() {
@@ -24,9 +32,15 @@ public class Personagem {
         idade = leia.nextInt();
         System.out.println("Quanto vc tem de money?");
         dinheiro = leia.nextDouble();
-        arma = null;
+        System.out.println("Gostaria de adquirir um equipamento?\n 1 - Sim\n 2 - Não\n");
+        int resp = leia.nextInt();
+        if (resp == 1) {
 
-        Personagem personagem = new Personagem(nome, idade, dinheiro, arma);
+            // Loja.vender();
+        }
+
+
+        Personagem personagem = new Personagem(nome, idade, dinheiro);
         return personagem;
     }
 
@@ -43,8 +57,11 @@ public class Personagem {
                 Loja.vender();
                 break;
             case 2:
-                if (personagem.arma == null) {
-                    
+                if (personagem.armas == null) {
+                    System.out.println("Você não possui armas");
+                }
+                else {
+                    // Arma.atirar(carregadores.carregador.qtd_balas);
                 }
             default:
                 break;

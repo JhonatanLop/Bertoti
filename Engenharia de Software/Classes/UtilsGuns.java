@@ -2,6 +2,10 @@ package Classes;
 
 import java.util.Scanner;
 
+import Classes.fabricaveis.Arma;
+import Classes.fabricaveis.Carregador;
+import Classes.fabricaveis.Municao;
+
 public class UtilsGuns {
     static Scanner leia = new Scanner(System.in);
     

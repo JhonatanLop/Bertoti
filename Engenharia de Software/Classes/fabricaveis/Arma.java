@@ -1,8 +1,8 @@
-package Classes;
+package Classes.fabricaveis;
 
 import java.util.Scanner;
 
-public class Arma {
+public class Arma extends Item{
     static Scanner leia = new Scanner(System.in);
 
     String nome;

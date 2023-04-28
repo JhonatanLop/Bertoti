@@ -1,7 +1,7 @@
-package Classes;
+package Classes.fabricaveis;
 import java.util.Scanner;
 
-public class Municao {
+public class Municao extends Item{
     static Scanner leia = new Scanner(System.in);
     
     String nome;
