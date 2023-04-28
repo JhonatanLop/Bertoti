@@ -77,6 +77,7 @@ public class Loja {
                 //     int indice = 1;
                 //     System.out.println(arsenalBuller.get(i) + "-" + indice + "\n");
                 // }
+                UtilsGuns.comprarMunicao();
             default:
                 break;
         }

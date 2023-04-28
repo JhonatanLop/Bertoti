@@ -52,9 +52,35 @@ public class UtilsGuns {
         int condition = leia.nextInt();
         if (condition == 1) {
             Fabrica.arsenalMag.remove(carregador);
+            System.out.println("Parabens pela compra!!");
         } else{
             System.out.println("Ok, volte sempre!");
         }
+    }
 
+    public static void comprarMunicao() {
+        // lista as munições disponíveis
+        System.out.println("Lista de munições:");
+        int indice = 1;
+        for (Municao b : Fabrica.arsenalBullet) {
+            System.out.println(indice + " - " + b + "\n");
+            indice++;
+        }
+
+        // seleciona a munição
+        System.out.println("Selecione a munição:");
+        int municaoIndex = leia.nextInt();
+        Municao municao = Fabrica.getArsenalBuller().get(municaoIndex -1);
+
+        // confirmação de compra
+        System.out.println("Gostaria de comprar a munição: " + municao + "? \n1 - Sim \n2 - Não");
+        int resp = leia.nextInt();
+        // retira munição da lista
+        if (resp == 1) {
+            Fabrica.arsenalBullet.remove(municaoIndex);
+            System.out.println("Parabens pela compra!!");
+        } else {
+            System.out.println("Ok, volte sempre!");
+        }
     }
 }

@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Municao {
     static Scanner leia = new Scanner(System.in);
     
+    String nome;
     String calibre;
     String tipoPonta;
     String tipoMunicao;
@@ -15,15 +16,17 @@ public class Municao {
     // criando construtor
     public Municao() {
         System.out.println("------Munição------");
+        System.out.println("Nome da  munição:");
+        nome = leia.nextLine();
         System.out.println("Qual o calibre?");
         calibre = leia.nextLine();
-        System.out.println("Tipo de Ponta");
+        System.out.println("Tipo de Ponta:");
         tipoPonta = leia.nextLine();
-        System.out.println("Tipo de Munição");
+        System.out.println("Tipo de Munição:");
         tipoMunicao = leia.nextLine();
-        System.out.println("Gramagem da munição");
+        System.out.println("Gramagem da munição:");
         peso = leia.nextDouble();
-        System.out.println("Velocidade do projétil");
+        System.out.println("Velocidade do projétil:");
         velocidade = leia.nextInt();
     }
     // public static Municao cadastrarMunicao() {
