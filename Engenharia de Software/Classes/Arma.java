@@ -54,14 +54,4 @@ public class Arma {
         System.out.println("Tamanho da Arma:");
         tamanho = leia.nextDouble();
     }
-
-    public static void main(String[] args) {
-        // criando carregador
-        Carregador newMag = new Carregador();
-        // criando arma
-        Arma newGun = new Arma();
-        
-        // chamando método da classe Arma
-        newGun.atirar(newMag.qtdMunicao);
-    }
 }
