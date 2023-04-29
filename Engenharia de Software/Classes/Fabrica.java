@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import Classes.fabricaveis.Arma;
+import Classes.fabricaveis.Carregador;
+import Classes.fabricaveis.Municao;
+
 public class Fabrica {
 
     static List<Arma> arsenalArmas = new ArrayList<>();

@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import Classes.fabricaveis.Arma;
 import Classes.fabricaveis.Carregador;
+import Classes.fabricaveis.Item;
 import Classes.fabricaveis.Municao;
 
 public class Personagem {
@@ -39,7 +40,6 @@ public class Personagem {
             // Loja.vender();
         }
 
-
         Personagem personagem = new Personagem(nome, idade, dinheiro);
         return personagem;
     }
@@ -54,11 +54,20 @@ public class Personagem {
 
         switch (resp) {
             case 1:
-                Loja.vender();
+                Item item = Loja.vender();
+                switch (item.getClass()) {
+                case Arma:
+
                 break;
+                }
             case 2:
                 if (personagem.armas == null) {
                     System.out.println("Você não possui armas");
+                    System.out.println("Gostaria de comprar uma?\n 1 - Sim\n 2 - Não");
+                    int condition = leia.nextInt();
+                    if (condition == 1) {
+                        Loja.vender();
+                    }
                 }
                 else {
                     // Arma.atirar(carregadores.carregador.qtd_balas);
