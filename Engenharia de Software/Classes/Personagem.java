@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import Classes.fabricaveis.Arma;
-import Classes.fabricaveis.Carregador;
-import Classes.fabricaveis.Item;
-import Classes.fabricaveis.Municao;
+import Classes.Fabricaveis.Arma;
+import Classes.Fabricaveis.Carregador;
+import Classes.Fabricaveis.Item;
+import Classes.Fabricaveis.Municao;
 
 public class Personagem {
     Scanner leia = new Scanner(System.in);
@@ -18,7 +18,6 @@ public class Personagem {
     List<Arma> armas = new ArrayList<Arma>();
     List<Carregador> carregadores = new ArrayList<Carregador>();
     List<Municao> municoes = new ArrayList<Municao>();
-
 
     public Personagem(String nome, int idade, Double dinheiro) {
         this.nome = nome;
@@ -47,6 +46,7 @@ public class Personagem {
     public void controlarPersonagem() {
         Personagem personagem = criarPersonagem();
         
+        // menu de utilização
         System.out.println("Gostaria de fazer oque?");
         System.out.println("1 - Comprar equipamentos");
         System.out.println("2 - Usar equipamentos");
@@ -54,12 +54,46 @@ public class Personagem {
 
         switch (resp) {
             case 1:
+                // vai até a loja e retorna um item
                 Item item = Loja.vender();
-                switch (item.getClass()) {
-                case Arma:
-
-                break;
+                // verifica o tipo do item
+                switch (item.getClass().getName()) {
+                    // caso o item comprado seja do tipo Arma:
+                    case "Arma":
+                        // realiza um cast (conversão de tipo) do objeto Item, para Arma
+                        Arma armaComprada = (Arma) item;
+                        // adiciona uma nova arma no arsenal
+                        armas.add(armaComprada);
+                    break;
+                    // caso o item comprado seja do tipo Carregador:
+                    case "Carregador":
+                        // converte tipo para Carregador
+                        Carregador newMag = (Carregador) item;
+                        // adiciona carregador no arsenal
+                        carregadores.add(newMag);
+                    break;
+                    // caso o item comprado seja do tipo Munição:
+                    case "Municao":
+                        // conversão de tipo
+                        Municao newBullet = (Municao) item;
+                        // adiciona munição no arsenal
+                        municoes.add(newBullet);
+                    break;
                 }
+
+                // // caso o item comprado seja do tipo Arma:
+                // if (item instanceof Arma) {
+                    
+                // } 
+                // // caso o item comprado seja do tipo Carregador:
+                // else if (item instanceof Carregador) {
+                    
+                // } 
+                // // caso o item comprado seja do tipo Municao
+                // else {
+
+                // }
+
             case 2:
                 if (personagem.armas == null) {
                     System.out.println("Você não possui armas");

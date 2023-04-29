@@ -1,4 +1,4 @@
-package Classes.fabricaveis;
+package Classes.Fabricaveis;
 import java.util.Scanner;
 
 public class Municao extends Item{

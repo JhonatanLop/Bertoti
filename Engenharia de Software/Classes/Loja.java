@@ -1,11 +1,12 @@
 package Classes;
 
+import java.util.List;
 import java.util.Scanner;
 
-import Classes.fabricaveis.Arma;
-import Classes.fabricaveis.Carregador;
-import Classes.fabricaveis.Item;
-import Classes.fabricaveis.Municao;
+import Classes.Fabricaveis.Arma;
+import Classes.Fabricaveis.Carregador;
+import Classes.Fabricaveis.Item;
+import Classes.Fabricaveis.Municao;
 
 public class Loja {
     static Scanner leia = new Scanner(System.in);
@@ -49,6 +50,7 @@ public class Loja {
         // lista as armas
         int indice = 1;
         System.out.println("Lista de Armas:");
+        // faz um loop e a cada iteração ele mostra um item da lista
         for (Arma a : Fabrica.getArsenalArmas()) {
             System.out.println((indice + " - ") + a + "\n");
             indice++;
@@ -57,15 +59,19 @@ public class Loja {
         // seleciona arma
         System.out.println("Selecione uma arma:");
         int armaIndex = leia.nextInt();
+        // salva numa variável o objeto na posição selecionada
         Arma arma = Fabrica.getArsenalArmas().get(armaIndex - 1);
 
-        // compra arma
+        // confirmação da compra da arma
         System.out.println("Gostaria de comprar a arma " + arma + "?");
         System.out.println("1 - Sim");
         System.out.println("2 - Não");
         int condition = leia.nextInt();
 
         if (condition == 1) {
+            // adiciona arma na classe
+            // armas.add(arma);
+            // retira arma da lista no indice selecionado
             Fabrica.arsenalArmas.remove(armaIndex - 1);
             System.out.println("Parabens pela compra!!");
         } else {
@@ -78,6 +84,7 @@ public class Loja {
         // lista os carregadores
         System.out.println("Lista de Carregadores:");
         int indice = 1;
+        // faz um loop e a cada iteração ele mostra um item da lista
         for (Carregador c : Fabrica.getArsenalMag()) {
             System.out.println((indice + " - ") + c + "\n");
             indice++;
@@ -104,6 +111,7 @@ public class Loja {
         // lista as munições disponíveis
         System.out.println("Lista de munições:");
         int indice = 1;
+        // faz um loop e a cada iteração ele mostra um item da lista
         for (Municao b : Fabrica.arsenalBullet) {
             System.out.println(indice + " - " + b + "\n");
             indice++;

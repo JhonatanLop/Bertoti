@@ -1,4 +1,4 @@
-package Classes.fabricaveis;
+package Classes.Fabricaveis;
 
 public class Item {
     
