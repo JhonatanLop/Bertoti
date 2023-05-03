@@ -1,6 +1,5 @@
 package Classes;
 
-import java.util.List;
 import java.util.Scanner;
 
 import Classes.Fabricaveis.Arma;

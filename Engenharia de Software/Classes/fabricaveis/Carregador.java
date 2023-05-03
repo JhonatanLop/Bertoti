@@ -2,12 +2,15 @@ package Classes.Fabricaveis;
 
 import java.util.Scanner;
 
+import Classes.Personagem;
+
 public class Carregador extends Item{
     static Scanner leia = new Scanner(System.in); 
 
     String marca;
     String corTransportador;
     String tipoAlinhamento;
+    String calibreCarregador;
     int capacidade;
     int qtdMunicao;
     Municao tipoMunicao;

@@ -10,44 +10,44 @@ import Classes.Fabricaveis.Item;
 import Classes.Fabricaveis.Municao;
 
 public class Personagem {
-    Scanner leia = new Scanner(System.in);
+    static Scanner leia = new Scanner(System.in);
     
-    String nome;
-    int idade;
-    Double dinheiro;
-    List<Arma> armas = new ArrayList<Arma>();
-    List<Carregador> carregadores = new ArrayList<Carregador>();
-    List<Municao> municoes = new ArrayList<Municao>();
+    static String nome;
+    static int idade;
+    static Double dinheiro;
+    static List<Arma> armas = new ArrayList<Arma>();
+    static List<Carregador> carregadores = new ArrayList<Carregador>();
+    static List<Municao> municoes = new ArrayList<Municao>();
 
     public Personagem(String nome, int idade, Double dinheiro) {
-        this.nome = nome;
-        this.idade = idade;
-        this.dinheiro = dinheiro;
+        Personagem.nome = nome;
+        Personagem.idade = idade;
+        Personagem.dinheiro = dinheiro;
     }
 
-    public Personagem criarPersonagem() {
+    public static Personagem criarPersonagem() {
         System.out.println("Qual é seu nome?");
         nome = leia.nextLine();
         System.out.println("Digite sua idade");
         idade = leia.nextInt();
         System.out.println("Quanto vc tem de money?");
         dinheiro = leia.nextDouble();
-        System.out.println("Gostaria de adquirir um equipamento?\n 1 - Sim\n 2 - Não\n");
-        int resp = leia.nextInt();
-        if (resp == 1) {
+        System.out.println("Você não possui nenhuma arma!");
+        // System.out.println("Gostaria de adquirir um equipamento?\n 1 - Sim\n 2 - Não\n");
+        // int resp = leia.nextInt();
+        // if (resp == 1) {
 
-            // Loja.vender();
-        }
-
+        //     // Loja.vender();
+        // }
         Personagem personagem = new Personagem(nome, idade, dinheiro);
         return personagem;
     }
 
-    public void controlarPersonagem() {
-        Personagem personagem = criarPersonagem();
+    public static void controlarPersonagem(Personagem personagem) {
+        // Personagem personagem = criarPersonagem();
         
         // menu de utilização
-        System.out.println("Gostaria de fazer oque?");
+        System.out.println("\nGostaria de fazer oque?");
         System.out.println("1 - Comprar equipamentos");
         System.out.println("2 - Usar equipamentos");
         int resp = leia.nextInt();
@@ -81,6 +81,7 @@ public class Personagem {
                     break;
                 }
 
+                // jeito alternativo
                 // // caso o item comprado seja do tipo Arma:
                 // if (item instanceof Arma) {
                     
@@ -95,7 +96,7 @@ public class Personagem {
                 // }
 
             case 2:
-                if (personagem.armas == null) {
+                if (Personagem.armas == null) {
                     System.out.println("Você não possui armas");
                     System.out.println("Gostaria de comprar uma?\n 1 - Sim\n 2 - Não");
                     int condition = leia.nextInt();
@@ -104,10 +105,15 @@ public class Personagem {
                     }
                 }
                 else {
-                    // Arma.atirar(carregadores.carregador.qtd_balas);
+                    // Arma.atirar();
                 }
             default:
                 break;
         }
+    }
+
+    public static void main(String[] args){
+        Personagem personagem = criarPersonagem();
+        controlarPersonagem(personagem);
     }
 }

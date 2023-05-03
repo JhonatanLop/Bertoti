@@ -1,6 +1,9 @@
 package Classes.Fabricaveis;
 
+import java.util.List;
 import java.util.Scanner;
+
+import Classes.Personagem;
 
 public class Arma extends Item{
     static Scanner leia = new Scanner(System.in);
@@ -8,6 +11,7 @@ public class Arma extends Item{
     String nome;
     String tipo;
     String marca;
+    String armaCalibre;
     double peso;
     double alcance;
     double tamanho;
@@ -37,6 +41,10 @@ public class Arma extends Item{
             }
         }
         return qtd_balas;
+    }
+
+    public void selecionarCarregador(List<Carregador> carregadores) {
+        
     }
     
     public Arma () {
