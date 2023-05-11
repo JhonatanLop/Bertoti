@@ -49,9 +49,18 @@ public class Loja {
         // lista as armas
         int indice = 1;
         System.out.println("Lista de Armas:");
+        
+        // cria todas as armas
+        Fabrica.gerarArma();
+        // System.out.println(Fabrica.getArsenalArmas());
+        // caso não esteja retornando armas ecerra.
+        if (Fabrica.getArsenalArmas() == null) {
+            System.out.println("\n Não temos armas disponíveis!\nPor favor volte mais tarde!");
+            return null;
+        }
         // faz um loop e a cada iteração ele mostra um item da lista
         for (Arma a : Fabrica.getArsenalArmas()) {
-            System.out.println((indice + " - ") + a + "\n");
+            System.out.println((indice + " - ") + a.getNome() + "\n");
             indice++;
         }
 
@@ -62,7 +71,7 @@ public class Loja {
         Arma arma = Fabrica.getArsenalArmas().get(armaIndex - 1);
 
         // confirmação da compra da arma
-        System.out.println("Gostaria de comprar a arma " + arma + "?");
+        System.out.println("Gostaria de comprar a arma " + arma.getNome() + "?");
         System.out.println("1 - Sim");
         System.out.println("2 - Não");
         int condition = leia.nextInt();
@@ -72,7 +81,8 @@ public class Loja {
             // armas.add(arma);
             // retira arma da lista no indice selecionado
             Fabrica.arsenalArmas.remove(armaIndex - 1);
-            System.out.println("Parabens pela compra!!");
+            System.out.println("\nParabens pela compra!!");
+            Personagem.controlarPersonagem();
         } else {
             System.out.println("Ok, volte sempre!");
         }

@@ -33,17 +33,11 @@ public class Personagem {
         System.out.println("Quanto vc tem de money?");
         dinheiro = leia.nextDouble();
         System.out.println("Você não possui nenhuma arma!");
-        // System.out.println("Gostaria de adquirir um equipamento?\n 1 - Sim\n 2 - Não\n");
-        // int resp = leia.nextInt();
-        // if (resp == 1) {
-
-        //     // Loja.vender();
-        // }
         Personagem personagem = new Personagem(nome, idade, dinheiro);
         return personagem;
     }
 
-    public static void controlarPersonagem(Personagem personagem) {
+    public static void controlarPersonagem() {
         // Personagem personagem = criarPersonagem();
         
         // menu de utilização
@@ -113,7 +107,7 @@ public class Personagem {
     }
 
     public static void main(String[] args){
-        Personagem personagem = criarPersonagem();
-        controlarPersonagem(personagem);
+        criarPersonagem();
+        controlarPersonagem();
     }
 }
