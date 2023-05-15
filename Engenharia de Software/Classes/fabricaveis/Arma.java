@@ -1,9 +1,6 @@
 package Classes.Fabricaveis;
 
-import java.util.List;
 import java.util.Scanner;
-
-import Classes.Personagem;
 
 public class Arma extends Item{
     static Scanner leia = new Scanner(System.in);
@@ -15,9 +12,9 @@ public class Arma extends Item{
     double peso;
     double alcance;
     double tamanho;
-    Carregador carregador;
 
-    public Integer atirar(int qtd_balas) {
+    
+    public static Integer atirar(int qtd_balas) {
         String acao = "s";
         while (acao == "s") {
             int atirar;
@@ -43,23 +40,36 @@ public class Arma extends Item{
         return qtd_balas;
     }
 
-    public void selecionarCarregador(List<Carregador> carregadores) {
-        
+    public Arma(
+        String nome, 
+        String tipo,
+        String marca,
+        String armaCalibre,
+        double peso,
+        double alcance,
+        double tamanho) {
+            this.nome = nome;
+            this.tipo = tipo;
+            this.marca = marca;
+            this.armaCalibre = armaCalibre;
+            this.peso = peso;
+            this.alcance = alcance;
+            this.tamanho = tamanho;
     }
-    
-    public Arma () {
-        System.out.println("--------Arma--------");
-        System.out.println("Nome da arma:");
-        nome = leia.nextLine();
-        System.out.println("Tipo de arma:");
-        tipo = leia.nextLine();
-        System.out.println("Qual à marca:");
-        marca = leia.nextLine();
-        System.out.println("Qual o peso?");
-        peso = leia.nextDouble();
-        System.out.println("Digite o Alcance máximo");
-        alcance = leia.nextDouble();
-        System.out.println("Tamanho da Arma:");
-        tamanho = leia.nextDouble();
-    }
-}
+
+    public static Scanner getLeia() { return leia; }
+    public static void setLeia(Scanner leia) { Arma.leia = leia; }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+    public String getTipo() { return tipo; }
+    public void setTipo(String tipo) { this.tipo = tipo; }
+    public String getMarca() { return marca; }
+    public void setMarca(String marca) { this.marca = marca; }
+    public String getArmaCalibre() { return armaCalibre; }
+    public void setArmaCalibre(String armaCalibre) { this.armaCalibre = armaCalibre; }
+    public double getPeso() { return peso; }
+    public void setPeso(double peso) { this.peso = peso; }
+    public double getAlcance() { return alcance; }
+    public void setAlcance(double alcance) { this.alcance = alcance; }
+    public double getTamanho() { return tamanho; }
+    public void setTamanho(double tamanho) { this.tamanho = tamanho; }}
