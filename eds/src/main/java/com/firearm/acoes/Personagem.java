@@ -1,13 +1,13 @@
-package Classes;
+package acoes;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import Classes.Fabricaveis.Arma;
-import Classes.Fabricaveis.Carregador;
-import Classes.Fabricaveis.Item;
-import Classes.Fabricaveis.Municao;
+import fabricaveis.Arma;
+import fabricaveis.Carregador;
+import fabricaveis.Item;
+import fabricaveis.Municao;
 
 public class Personagem {
     static Scanner leia = new Scanner(System.in);
@@ -110,10 +110,5 @@ public class Personagem {
             default:
                 break;
         }
-    }
-
-    public static void main(String[] args){
-        Personagem personagem = criarPersonagem();
-        controlarPersonagem(personagem);
     }
 }

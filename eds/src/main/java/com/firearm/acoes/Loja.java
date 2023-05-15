@@ -1,11 +1,11 @@
-package Classes;
+package acoes;
 
 import java.util.Scanner;
 
-import Classes.Fabricaveis.Arma;
-import Classes.Fabricaveis.Carregador;
-import Classes.Fabricaveis.Item;
-import Classes.Fabricaveis.Municao;
+import fabricaveis.Arma;
+import fabricaveis.Carregador;
+import fabricaveis.Item;
+import fabricaveis.Municao;
 
 public class Loja {
     static Scanner leia = new Scanner(System.in);

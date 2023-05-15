@@ -1,12 +1,12 @@
-package Classes;
+package acoes;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import Classes.Fabricaveis.Arma;
-import Classes.Fabricaveis.Carregador;
-import Classes.Fabricaveis.Municao;
+import fabricaveis.Arma;
+import fabricaveis.Carregador;
+import fabricaveis.Municao;
 
 public class Fabrica {
 

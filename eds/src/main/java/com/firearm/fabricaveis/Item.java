@@ -1,4 +1,4 @@
-package Classes.Fabricaveis;
+package fabricaveis;
 
 import java.util.List;
 
