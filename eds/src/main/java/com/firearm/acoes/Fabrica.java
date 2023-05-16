@@ -152,6 +152,4 @@ public class Fabrica {
     static public List<Arma> getArsenalArmas() { return arsenalArmas; }
 
     static public List<Carregador> getArsenalMag() { return arsenalMag; }
-
-    static public List<Municao> getArsenalBuller() { return arsenalBullet; }
 }

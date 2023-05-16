@@ -1,5 +1,6 @@
 package acoes;
 
+import java.util.List;
 import java.util.Scanner;
 
 import fabricaveis.Arma;
@@ -48,9 +49,11 @@ public class Loja {
     static public Arma comprarArma() {
         // lista as armas
         int indice = 1;
+        List<Arma> armas = Fabrica.getArsenalArmas();
+        
         System.out.println("Lista de Armas:");
         // faz um loop e a cada iteração ele mostra um item da lista
-        for (Arma a : Fabrica.getArsenalArmas()) {
+        for (Arma a : armas) {
             System.out.println((indice + " - ") + a + "\n");
             indice++;
         }
@@ -108,29 +111,7 @@ public class Loja {
 
     public static Municao comprarMunicao() {
         // lista as munições disponíveis
-        System.out.println("Lista de munições:");
-        int indice = 1;
-        // faz um loop e a cada iteração ele mostra um item da lista
-        for (Municao b : Fabrica.arsenalBullet) {
-            System.out.println(indice + " - " + b + "\n");
-            indice++;
-        }
-
-        // seleciona a munição
-        System.out.println("Selecione a munição:");
-        int municaoIndex = leia.nextInt();
-        Municao municao = Fabrica.getArsenalBuller().get(municaoIndex - 1);
-
-        // confirmação de compra
-        System.out.println("Gostaria de comprar a munição: " + municao + "? \n1 - Sim \n2 - Não");
-        int resp = leia.nextInt();
-        // retira munição da lista
-        if (resp == 1) {
-            Fabrica.arsenalBullet.remove(municaoIndex);
-            System.out.println("Parabens pela compra!!");
-        } else {
-            System.out.println("Ok, volte sempre!");
-        }
+        Municao municao = new Municao();
         return municao;
     }
 }
