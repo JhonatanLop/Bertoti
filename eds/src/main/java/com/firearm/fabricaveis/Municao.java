@@ -1,4 +1,4 @@
-package fabricaveis;
+package com.firearm.fabricaveis;
 
 public class Municao extends Item{
     // static Scanner leia = new Scanner(System.in);

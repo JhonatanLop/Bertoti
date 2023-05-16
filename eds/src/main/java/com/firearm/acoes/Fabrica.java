@@ -17,7 +17,7 @@ public class Fabrica {
 
     Scanner leia = new Scanner(System.in);
 
-    public void geradorArmas() {
+    public static void geradorArmas() {
         // scar h
         Arma scarH = new Arma(
                 "SCAR-H",

@@ -1,4 +1,4 @@
-package fabricaveis;
+package com.firearm.fabricaveis;
 
 import java.util.Scanner;
 
