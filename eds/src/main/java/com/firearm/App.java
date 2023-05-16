@@ -1,4 +1,4 @@
-package com.firearm;
+import acoes.Personagem;
 
 /**
  * Hello world!
@@ -12,7 +12,7 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        Personagem personagem = criarPersonagem();
-        controlarPersonagem(personagem);
+        Personagem personagem = new Personagem("jhow",19,500.0);
+        Personagem.controlarPersonagem(personagem);
     }
 }
