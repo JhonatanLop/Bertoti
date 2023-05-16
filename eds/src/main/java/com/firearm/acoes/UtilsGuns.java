@@ -1,10 +1,9 @@
-package acoes;
+package com.firearm.acoes;
 
 import java.util.Scanner;
 
-import fabricaveis.Arma;
-import fabricaveis.Carregador;
-import fabricaveis.Municao;
+import com.firearm.fabricaveis.Arma;
+import com.firearm.fabricaveis.Carregador;
 
 public class UtilsGuns {
     static Scanner leia = new Scanner(System.in);

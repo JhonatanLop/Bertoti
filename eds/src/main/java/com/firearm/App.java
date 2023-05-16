@@ -1,5 +1,7 @@
-import acoes.Fabrica;
-import acoes.Personagem;
+package com.firearm;
+
+import com.firearm.acoes.Fabrica;
+import com.firearm.acoes.Personagem;
 
 /**
  * Hello world!
@@ -14,8 +16,8 @@ public final class App {
      */
     public static void main(String[] args) {
         // gera armas e carregadores
-        Fabrica.getArsenalArmas();
-        Fabrica.getArsenalMag();
+        Fabrica.geradorArmas();
+        Fabrica.gerarCarregador();
 
         Personagem personagem = new Personagem("jhow",19,500.0);
         Personagem.controlarPersonagem(personagem);

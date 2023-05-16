@@ -1,8 +1,8 @@
-package fabricaveis;
+package com.firearm.fabricaveis;
 
 import java.util.Scanner;
 
-import fabricaveis.Municao.MunicaoType;
+import com.firearm.fabricaveis.Municao.MunicaoType;
 
 public class Carregador extends Item{
     static Scanner leia = new Scanner(System.in); 

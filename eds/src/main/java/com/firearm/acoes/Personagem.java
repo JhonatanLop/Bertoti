@@ -1,13 +1,13 @@
-package acoes;
+package com.firearm.acoes;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import fabricaveis.Arma;
-import fabricaveis.Carregador;
-import fabricaveis.Item;
-import fabricaveis.Municao;
+import com.firearm.fabricaveis.Arma;
+import com.firearm.fabricaveis.Carregador;
+import com.firearm.fabricaveis.Item;
+import com.firearm.fabricaveis.Municao;
 
 public class Personagem {
     static Scanner leia = new Scanner(System.in);

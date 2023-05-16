@@ -1,13 +1,13 @@
-package acoes;
+package com.firearm.acoes;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import fabricaveis.Arma;
-import fabricaveis.Carregador;
-import fabricaveis.Municao;
-import fabricaveis.Municao.MunicaoType;
+import com.firearm.fabricaveis.Arma;
+import com.firearm.fabricaveis.Carregador;
+import com.firearm.fabricaveis.Municao;
+import com.firearm.fabricaveis.Municao.MunicaoType;
 
 public class Fabrica {
 
@@ -80,7 +80,7 @@ public class Fabrica {
         arsenalArmas.add(remington870);
     }
 
-    public void gerarCarregador() {
+    public static void gerarCarregador() {
         // Carregador da SCAR-H
         Carregador scarHMag = new Carregador(
                 "FN Herstal",
