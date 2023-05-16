@@ -1,6 +1,7 @@
 package com.firearm.fabricaveis;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class Arma extends Item{
     static Scanner leia = new Scanner(System.in);
@@ -16,13 +17,19 @@ public class Arma extends Item{
     
     public static Integer atirar(int qtd_balas) {
         String acao = "s";
+        Random rand = new Random();
         while (acao == "s") {
             int atirar;
             System.out.println("Você tem " + qtd_balas + " balas\nAtirar? \n1-sim\n2-não");
             atirar = leia.nextInt();
             if (atirar == 1 && qtd_balas != 0) {
+                if(rand.nextInt(11) < 3){
+                    System.out.println("Arma travou!\n *engatilha*");
+                    qtd_balas--;
+                } else{
                 qtd_balas--;
                 System.out.println("POW!");
+                }
             }
             else {
                 String resp;
@@ -38,6 +45,10 @@ public class Arma extends Item{
             }
         }
         return qtd_balas;
+    }
+
+    public static void travar() {
+        
     }
 
     public Arma(
