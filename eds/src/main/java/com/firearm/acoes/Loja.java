@@ -14,9 +14,7 @@ public class Loja {
     Double preco;
     static int menu;
     
-    static public List<Item> vender() {
-        List<Item> sacola = new List<Item>();
-        
+    static public void vender() {
         // menu
         System.out.println("Oque gostaria de comprar?");
         System.out.println("1 - Arma");
@@ -25,11 +23,11 @@ public class Loja {
         switch (menu) {
             case 1:
                 // compra arma
-                List<Arma> carrinhoAr = (Loja.comprarArma());
+                Controlador.setArmas(Loja.comprarArma());
                 break;
             case 2:
                 // compra carregador
-                List<Carregador> carrinhoMag = (Loja.comprarMag());
+                Controlador.setCarregadores(Loja.comprarMag());
                 break;
             default:
                 System.out.println("Fora do escopo!");
@@ -43,8 +41,6 @@ public class Loja {
         } else {
             System.out.println("Ok, volte sempre!");
         }
-
-        return null;
     }
 
     public static List<Arma> comprarArma() {

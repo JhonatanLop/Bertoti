@@ -1,6 +1,7 @@
 package com.firearm.acoes;
 
 import java.util.Scanner;
+import java.util.List;
 
 import com.firearm.fabricaveis.Arma;
 import com.firearm.fabricaveis.Carregador;
@@ -59,5 +60,17 @@ public class UtilsGuns {
         } else{
             System.out.println("Ok, volte sempre!");
         }
+    }
+
+    public static int magCompativel(Arma arma,List<Carregador> carregadores) {
+        int indice = 0;
+        int index = 0;
+        for (Carregador carregador : carregadores) {
+            if (arma.getArmaCalibre() == carregador.getCalibreCarregador()) {
+                index = indice;
+            }
+        }
+        
+        return index;
     }
 }

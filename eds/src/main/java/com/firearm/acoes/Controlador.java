@@ -11,7 +11,7 @@ import com.firearm.fabricaveis.Municao;
 
 public class Controlador {
     static Scanner leia = new Scanner(System.in);
-    
+
     static String nome;
     static int idade;
     static Double dinheiro;
@@ -27,7 +27,7 @@ public class Controlador {
 
     public static void controlarPersonagem() {
         // Personagem personagem = criarPersonagem();
-        
+
         // menu de utilização
         System.out.println("\nGostaria de fazer oque?");
         System.out.println("1 - Comprar equipamentos");
@@ -36,72 +36,102 @@ public class Controlador {
 
         switch (resp) {
             case 1:
-                // vai até a loja e retorna um item
-                List<Item> item = Loja.vender();
-                // verifica o tipo do item
-                switch (item.getClass().getName()) {
-                    // caso o item comprado seja do tipo Arma:
-                    case "Arma":
-                        // realiza um cast (conversão de tipo) do objeto Item, para Arma
-                        
-                        Arma armaComprada = (Arma) item;
-                        // adiciona uma nova arma no arsenal
-                        armas.add(armaComprada);
-                    break;
-                    // caso o item comprado seja do tipo Carregador:
-                    case "Carregador":
-                        // converte tipo para Carregador
-                        Carregador newMag = (Carregador) item;
-                        // adiciona carregador no arsenal
-                        carregadores.add(newMag);
-                    break;
-                    // caso o item comprado seja do tipo Munição:
-                    case "Municao":
-                        // conversão de tipo
-                        Municao newBullet = (Municao) item;
-                        // adiciona munição no arsenal
-                        municoes.add(newBullet);
-                    break;
-                }
+                Loja.vender();
+                // // vai até a loja e retorna um item
+                // List<Item> item = Loja.vender();
+                // // verifica o tipo do item
+                // switch (item.getClass().getName()) {
+                // // caso o item comprado seja do tipo Arma:
+                // case "Arma":
+                // // realiza um cast (conversão de tipo) do objeto Item, para Arma
+
+                // Arma armaComprada = (Arma) item;
+                // // adiciona uma nova arma no arsenal
+                // armas.add(armaComprada);
+                // break;
+                // // caso o item comprado seja do tipo Carregador:
+                // case "Carregador":
+                // // converte tipo para Carregador
+                // Carregador newMag = (Carregador) item;
+                // // adiciona carregador no arsenal
+                // carregadores.add(newMag);
+                // break;
+                // // caso o item comprado seja do tipo Munição:
+                // case "Municao":
+                // // conversão de tipo
+                // Municao newBullet = (Municao) item;
+                // // adiciona munição no arsenal
+                // municoes.add(newBullet);
+                break;
 
             case 2:
-                if (Controlador.armas == null) {
-                    System.out.println("Você não possui armas");
-                    System.out.println("Gostaria de comprar uma?\n 1 - Sim\n 2 - Não");
-                    int condition = leia.nextInt();
-                    if (condition == 1) {
-                        Loja.vender();
+                if (Controlador.armas != null) {
+                    // seleciona a arma a ser usada
+                    System.out.println("Suas Armas:");
+                    int i = 1;
+                    for (Arma arma : armas) {
+                        System.out.println(i + " = " + arma.getNome());
                     }
-                }
-                else {
-                    // Arma.atirar();
+                    int newarma = leia.nextInt() - 1;
+                    Arma courrentArma = armas.get(newarma);
+                    // verifica se tem um carregador disponível dessa arma
+                    Carregador courrentCarregador = carregadores.get(UtilsGuns.magCompativel(courrentArma, carregadores));
+                    Arma.atirar(courrentCarregador.getQtdMunicao());
+                } else {
+                    System.out.println("Você não possui armas\nGostaria de comprar uma?\n 1 - Sim\n 2 - Não");
+                    int condition = leia.nextInt();
+                    if (condition == 1) { Loja.vender(); }
                 }
             default:
                 break;
         }
     }
 
-    public static String getNome() { return nome; }
+    public static String getNome() {
+        return nome;
+    }
 
-    public static int getIdade() { return idade; }
+    public static int getIdade() {
+        return idade;
+    }
 
-    public static Double getDinheiro() { return dinheiro; }
+    public static Double getDinheiro() {
+        return dinheiro;
+    }
 
-    public static List<Arma> getArmas() { return armas; }
+    public static List<Arma> getArmas() {
+        return armas;
+    }
 
-    public static List<Carregador> getCarregadores() { return carregadores; }
+    public static List<Carregador> getCarregadores() {
+        return carregadores;
+    }
 
-    public static List<Municao> getMunicoes() { return municoes; }
+    public static List<Municao> getMunicoes() {
+        return municoes;
+    }
 
-    public static void setNome(String nome) { Controlador.nome = nome; }
+    public static void setNome(String nome) {
+        Controlador.nome = nome;
+    }
 
-    public static void setIdade(int idade) { Controlador.idade = idade; }
+    public static void setIdade(int idade) {
+        Controlador.idade = idade;
+    }
 
-    public static void setDinheiro(Double dinheiro) { Controlador.dinheiro = dinheiro; }
+    public static void setDinheiro(Double dinheiro) {
+        Controlador.dinheiro = dinheiro;
+    }
 
-    public static void setArmas(List<Arma> armas) { Controlador.armas = armas; }
+    public static void setArmas(List<Arma> armas) {
+        Controlador.armas = armas;
+    }
 
-    public static void setCarregadores(List<Carregador> carregadores) { Controlador.carregadores = carregadores; }
+    public static void setCarregadores(List<Carregador> carregadores) {
+        Controlador.carregadores = carregadores;
+    }
 
-    public static void setMunicoes(List<Municao> municoes) { Controlador.municoes = municoes; }
+    public static void setMunicoes(List<Municao> municoes) {
+        Controlador.municoes = municoes;
+    }
 }
