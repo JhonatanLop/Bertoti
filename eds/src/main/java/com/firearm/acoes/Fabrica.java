@@ -34,9 +34,9 @@ public class Fabrica {
                 "Pistola",
                 "Glock",
                 "9x19mm Parabellum",
-                870.0,
+                0.87,
                 40.0,
-                185.0);
+                18.5);
         arsenalArmas.add(glock);
 
         Arma smithWessonShield = new Arma(
@@ -44,9 +44,9 @@ public class Fabrica {
                 "Pistola",
                 "Smith & Wesson",
                 "9x19mm Parabellum",
-                454.0,
+                0.454,
                 25.0,
-                154.0);
+                15.4);
         arsenalArmas.add(smithWessonShield);
 
         Arma sigSauerP320 = new Arma(
@@ -54,9 +54,9 @@ public class Fabrica {
                 "Pistola",
                 "Sig Sauer",
                 "9x19mm Parabellum",
-                680.0,
+                0.68,
                 50.0,
-                203.0);
+                20.3);
         arsenalArmas.add(sigSauerP320);
 
         Arma coltAR15 = new Arma(
@@ -64,9 +64,9 @@ public class Fabrica {
                 "Rifle",
                 "Colt",
                 ".223 Remington",
-                2900.0,
+                2.9,
                 600.0,
-                980.0);
+                98.0);
         arsenalArmas.add(coltAR15);
 
         Arma remington870 = new Arma(
@@ -74,9 +74,9 @@ public class Fabrica {
                 "Espingarda",
                 "Remington",
                 "12 Gauge",
-                3700.0,
+                3.7,
                 50.0,
-                1080.0);
+                108.0);
         arsenalArmas.add(remington870);
     }
 

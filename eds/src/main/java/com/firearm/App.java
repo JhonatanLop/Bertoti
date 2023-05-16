@@ -1,7 +1,7 @@
 package com.firearm;
 
 import com.firearm.acoes.Fabrica;
-import com.firearm.acoes.Personagem;
+import com.firearm.acoes.Controlador;
 
 /**
  * Hello world!
@@ -19,7 +19,6 @@ public final class App {
         Fabrica.geradorArmas();
         Fabrica.gerarCarregador();
 
-        Personagem personagem = new Personagem("jhow",19,500.0);
-        Personagem.controlarPersonagem(personagem);
+        Controlador.controlarPersonagem();
     }
 }

@@ -9,7 +9,7 @@ import com.firearm.fabricaveis.Carregador;
 import com.firearm.fabricaveis.Item;
 import com.firearm.fabricaveis.Municao;
 
-public class Personagem {
+public class Controlador {
     static Scanner leia = new Scanner(System.in);
     
     static String nome;
@@ -19,31 +19,13 @@ public class Personagem {
     static List<Carregador> carregadores = new ArrayList<Carregador>();
     static List<Municao> municoes = new ArrayList<Municao>();
 
-    public Personagem(String nome, int idade, Double dinheiro) {
-        Personagem.nome = nome;
-        Personagem.idade = idade;
-        Personagem.dinheiro = dinheiro;
+    public Controlador(String nome, int idade, Double dinheiro) {
+        Controlador.nome = nome;
+        Controlador.idade = idade;
+        Controlador.dinheiro = dinheiro;
     }
 
-    public static Personagem criarPersonagem() {
-        System.out.println("Qual é seu nome?");
-        nome = leia.nextLine();
-        System.out.println("Digite sua idade");
-        idade = leia.nextInt();
-        System.out.println("Quanto vc tem de money?");
-        dinheiro = leia.nextDouble();
-        System.out.println("Você não possui nenhuma arma!");
-        // System.out.println("Gostaria de adquirir um equipamento?\n 1 - Sim\n 2 - Não\n");
-        // int resp = leia.nextInt();
-        // if (resp == 1) {
-
-        //     // Loja.vender();
-        // }
-        Personagem personagem = new Personagem(nome, idade, dinheiro);
-        return personagem;
-    }
-
-    public static void controlarPersonagem(Personagem personagem) {
+    public static void controlarPersonagem() {
         // Personagem personagem = criarPersonagem();
         
         // menu de utilização
@@ -55,12 +37,13 @@ public class Personagem {
         switch (resp) {
             case 1:
                 // vai até a loja e retorna um item
-                Item item = Loja.vender();
+                List<Item> item = Loja.vender();
                 // verifica o tipo do item
                 switch (item.getClass().getName()) {
                     // caso o item comprado seja do tipo Arma:
                     case "Arma":
                         // realiza um cast (conversão de tipo) do objeto Item, para Arma
+                        
                         Arma armaComprada = (Arma) item;
                         // adiciona uma nova arma no arsenal
                         armas.add(armaComprada);
@@ -81,22 +64,8 @@ public class Personagem {
                     break;
                 }
 
-                // jeito alternativo
-                // // caso o item comprado seja do tipo Arma:
-                // if (item instanceof Arma) {
-                    
-                // } 
-                // // caso o item comprado seja do tipo Carregador:
-                // else if (item instanceof Carregador) {
-                    
-                // } 
-                // // caso o item comprado seja do tipo Municao
-                // else {
-
-                // }
-
             case 2:
-                if (Personagem.armas == null) {
+                if (Controlador.armas == null) {
                     System.out.println("Você não possui armas");
                     System.out.println("Gostaria de comprar uma?\n 1 - Sim\n 2 - Não");
                     int condition = leia.nextInt();
@@ -111,4 +80,28 @@ public class Personagem {
                 break;
         }
     }
+
+    public static String getNome() { return nome; }
+
+    public static int getIdade() { return idade; }
+
+    public static Double getDinheiro() { return dinheiro; }
+
+    public static List<Arma> getArmas() { return armas; }
+
+    public static List<Carregador> getCarregadores() { return carregadores; }
+
+    public static List<Municao> getMunicoes() { return municoes; }
+
+    public static void setNome(String nome) { Controlador.nome = nome; }
+
+    public static void setIdade(int idade) { Controlador.idade = idade; }
+
+    public static void setDinheiro(Double dinheiro) { Controlador.dinheiro = dinheiro; }
+
+    public static void setArmas(List<Arma> armas) { Controlador.armas = armas; }
+
+    public static void setCarregadores(List<Carregador> carregadores) { Controlador.carregadores = carregadores; }
+
+    public static void setMunicoes(List<Municao> municoes) { Controlador.municoes = municoes; }
 }
