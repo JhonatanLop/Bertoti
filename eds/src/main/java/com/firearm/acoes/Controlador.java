@@ -70,7 +70,7 @@ public class Controlador {
                 break;
 
             case 2:
-                if (Controlador.armas != null) {
+                if (!Controlador.armas.isEmpty()) {
                     // seleciona a arma a ser usada
                     System.out.println("Suas Armas:");
                     int i = 1;
@@ -84,12 +84,13 @@ public class Controlador {
                             .get(UtilsGuns.magCompativel(courrentArma, carregadores));
                     Arma.atirar(courrentCarregador.getQtdMunicao());
                 } else {
-                    System.out.println("Você não possui armas\nGostaria de comprar uma?\n 1 - Sim\n 2 - Não");
+                    System.out.println("Você não possui armas\nGostaria de comprar uma?\n1 - Sim\n2 - Não");
                     int condition = leia.nextInt();
                     if (condition == 1) {
                         Loja.vender();
                     }
                 }
+
             default:
                 break;
         }
