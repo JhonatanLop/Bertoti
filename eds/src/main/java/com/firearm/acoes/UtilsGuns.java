@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.firearm.fabricaveis.Arma;
 import com.firearm.fabricaveis.Carregador;
-import com.firearm.fabricaveis.Item;
 
 public class UtilsGuns {
     static Scanner leia = new Scanner(System.in);

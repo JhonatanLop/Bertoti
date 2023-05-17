@@ -44,7 +44,7 @@ public class Item {
 
     // carregador
     public String getMarcaCarregador() { return marcaCarregador;}
-    public void setMarcaCarregador(String marca) { this.marcaCarregador = marcaCarregador;}
+    public void setMarcaCarregador(String marcaCarregador) { this.marcaCarregador = marcaCarregador;}
     public String getCorTransportador() { return corTransportador;}
     public void setCorTransportador(String corTransportador) { this.corTransportador = corTransportador;}
     public String getTipoAlinhamento() { return tipoAlinhamento;}
