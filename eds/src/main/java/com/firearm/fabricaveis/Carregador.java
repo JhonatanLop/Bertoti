@@ -66,30 +66,16 @@ public class Carregador extends Item{
     }
 
     public String getMarca() { return marca;}
-
     public void setMarca(String marca) { this.marca = marca;}
-
     public String getCorTransportador() { return corTransportador;}
-
     public void setCorTransportador(String corTransportador) { this.corTransportador = corTransportador;}
-
     public String getTipoAlinhamento() { return tipoAlinhamento;}
-
     public void setTipoAlinhamento(String tipoAlinhamento) { this.tipoAlinhamento = tipoAlinhamento;}
-
     public String getCalibreCarregador() { return calibreCarregador;}
-
     public void setCalibreCarregador(String calibreCarregador) { this.calibreCarregador = calibreCarregador;}
-
     public int getCapacidade() { return capacidade;}
-
     public void setCapacidade(int capacidade) { this.capacidade = capacidade;}
-
     public int getQtdMunicao() { return qtdMunicao;}
-
     public void setQtdMunicao(int qtdMunicao) { this.qtdMunicao = qtdMunicao;}
-
     public MunicaoType getTipoMunicao() { return tipoMunicao;}
-
-    public void setTipoMunicao(MunicaoType tipoMunicao) { this.tipoMunicao = tipoMunicao;}
-}
+    public void setTipoMunicao(MunicaoType tipoMunicao) { this.tipoMunicao = tipoMunicao;}}

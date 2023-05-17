@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 import com.firearm.fabricaveis.Arma;
 import com.firearm.fabricaveis.Carregador;
-import com.firearm.fabricaveis.Item;
 import com.firearm.fabricaveis.Municao;
 
 public class Controlador {
@@ -19,7 +18,13 @@ public class Controlador {
     static List<Carregador> carregadores = new ArrayList<Carregador>();
     static List<Municao> municoes = new ArrayList<Municao>();
 
-    public Controlador(String nome, int idade, Double dinheiro) {
+    public Controlador(
+            String nome,
+            int idade,
+            Double dinheiro,
+            List<Arma> armas,
+            List<Carregador> carregadores,
+            List<Municao> municoes) {
         Controlador.nome = nome;
         Controlador.idade = idade;
         Controlador.dinheiro = dinheiro;
@@ -75,63 +80,42 @@ public class Controlador {
                     int newarma = leia.nextInt() - 1;
                     Arma courrentArma = armas.get(newarma);
                     // verifica se tem um carregador disponível dessa arma
-                    Carregador courrentCarregador = carregadores.get(UtilsGuns.magCompativel(courrentArma, carregadores));
+                    Carregador courrentCarregador = carregadores
+                            .get(UtilsGuns.magCompativel(courrentArma, carregadores));
                     Arma.atirar(courrentCarregador.getQtdMunicao());
                 } else {
                     System.out.println("Você não possui armas\nGostaria de comprar uma?\n 1 - Sim\n 2 - Não");
                     int condition = leia.nextInt();
-                    if (condition == 1) { Loja.vender(); }
+                    if (condition == 1) {
+                        Loja.vender();
+                    }
                 }
             default:
                 break;
         }
     }
 
-    public static String getNome() {
-        return nome;
-    }
+    public static String getNome() { return nome; }
 
-    public static int getIdade() {
-        return idade;
-    }
+    public static int getIdade() { return idade; }
 
-    public static Double getDinheiro() {
-        return dinheiro;
-    }
+    public static Double getDinheiro() { return dinheiro; }
 
-    public static List<Arma> getArmas() {
-        return armas;
-    }
+    public static List<Arma> getArmas() { return armas; }
 
-    public static List<Carregador> getCarregadores() {
-        return carregadores;
-    }
+    public static List<Carregador> getCarregadores() { return carregadores; }
 
-    public static List<Municao> getMunicoes() {
-        return municoes;
-    }
+    public static List<Municao> getMunicoes() { return municoes; }
 
-    public static void setNome(String nome) {
-        Controlador.nome = nome;
-    }
+    public static void setNome(String nome) { Controlador.nome = nome; }
 
-    public static void setIdade(int idade) {
-        Controlador.idade = idade;
-    }
+    public static void setIdade(int idade) { Controlador.idade = idade; }
 
-    public static void setDinheiro(Double dinheiro) {
-        Controlador.dinheiro = dinheiro;
-    }
+    public static void setDinheiro(Double dinheiro) { Controlador.dinheiro = dinheiro; }
 
-    public static void setArmas(List<Arma> armas) {
-        Controlador.armas = armas;
-    }
+    public static void setArmas(List<Arma> armas) { Controlador.armas = armas; }
 
-    public static void setCarregadores(List<Carregador> carregadores) {
-        Controlador.carregadores = carregadores;
-    }
+    public static void setCarregadores(List<Carregador> carregadores) { Controlador.carregadores = carregadores; }
 
-    public static void setMunicoes(List<Municao> municoes) {
-        Controlador.municoes = municoes;
-    }
+    public static void setMunicoes(List<Municao> municoes) { Controlador.municoes = municoes; }
 }

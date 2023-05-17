@@ -2,11 +2,11 @@ package com.firearm.acoes;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 import com.firearm.fabricaveis.Arma;
 import com.firearm.fabricaveis.Carregador;
 import com.firearm.fabricaveis.Item;
-import com.firearm.fabricaveis.Municao;
 
 public class Loja {
     static Scanner leia = new Scanner(System.in);
@@ -15,6 +15,8 @@ public class Loja {
     static int menu;
     
     static public void vender() {
+        List<Item> carrinho = new ArrayList<Item>();
+        
         // menu
         System.out.println("Oque gostaria de comprar?");
         System.out.println("1 - Arma");
@@ -23,11 +25,12 @@ public class Loja {
         switch (menu) {
             case 1:
                 // compra arma
-                Controlador.setArmas(Loja.comprarArma());
+                Loja.comprarArma();
                 break;
             case 2:
                 // compra carregador
                 Controlador.setCarregadores(Loja.comprarMag());
+                Loja.comprarMag();
                 break;
             default:
                 System.out.println("Fora do escopo!");
@@ -41,50 +44,32 @@ public class Loja {
         } else {
             System.out.println("Ok, volte sempre!");
         }
+        Controlador.controlarPersonagem();
     }
 
-    public static List<Arma> comprarArma() {
-        // lista as armas
-        int indice = 1;
-        List<Arma> armas = Fabrica.getArsenalArmas();
+    public static void comprarArma() {
+        List<Arma> armasLoja = Fabrica.getArsenalArmas();
         
-        System.out.println("Lista de Armas:");
-        // faz um loop e a cada iteração ele mostra um item da lista
-        for (Arma a : armas) {
-            System.out.println((indice + " - ") + a.getNome() + "\n");
-            indice++;
-        }
-
-        // seleciona arma
         System.out.println("Selecione uma arma:");
+        // lista as armas
+        UtilsGuns.listagemArma(armasLoja);
         int armaIndex = leia.nextInt();
         // salva numa variável o objeto na posição selecionada
-        Arma arma = Fabrica.getArsenalArmas().get(armaIndex - 1);
-
-        // confirmação da compra da arma
-        // System.out.println("Gostaria de comprar a arma:");
-        // System.out.println("Nome: " + arma.getNome());
-        // System.out.println("Tipo: " + arma.getTipo());
-        // System.out.println("Marca: " + arma.getMarca());
-        // System.out.println("Calibre: " + arma.getArmaCalibre());
-        // System.out.println("Tamanho: " + arma.getTamanho() + "cm");
-        // System.out.println("Peso: " + arma.getPeso() + "Kg");
-        // System.out.println("Alcance:" + arma.getAlcance() + "m²");
+        Arma arma = armasLoja.get(armaIndex - 1);
 
         System.out.println("\n1 - Sim");
         System.out.println("2 - Não");
         int condition = leia.nextInt();
 
         if (condition == 1) {
-            // adiciona arma na classe
-            armas.add(arma);
+            // adiciona arma na lista
+            Controlador.armas.add(arma);
             // retira arma da lista no indice selecionado
             Fabrica.arsenalArmas.remove(armaIndex - 1);
             System.out.println("Parabens pela compra!!");
         } else {
             System.out.println("Ok, volte sempre!");
         }
-        return armas;
     }
 
     static public List<Carregador> comprarMag() {
