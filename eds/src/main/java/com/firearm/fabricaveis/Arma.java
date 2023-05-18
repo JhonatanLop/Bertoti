@@ -1,6 +1,9 @@
 package com.firearm.fabricaveis;
 
 import java.util.Scanner;
+
+import com.firearm.acoes.Controlador;
+
 import java.util.Random;
 
 public class Arma extends Item{
@@ -13,42 +16,40 @@ public class Arma extends Item{
     double peso;
     double alcance;
     double tamanho;
+    Carregador carregador;
 
     
-    public static Integer atirar(int qtd_balas) {
+    public static void atirar(Arma courrentArma) {
+        Carregador courrentMag = Carregador.carregar(courrentArma, Controlador.carregadores);
         String acao = "s";
         Random rand = new Random();
+        int qtdMunicao = courrentMag.getQtdMunicao();
         while (acao == "s") {
             int atirar;
-            System.out.println("Você tem " + qtd_balas + " balas\nAtirar? \n1-sim\n2-não");
+            System.out.println("Você tem " + qtdMunicao + " balas\nAtirar? \n1-sim\n2-não");
             atirar = leia.nextInt();
-            if (atirar == 1 && qtd_balas != 0) {
+            if (atirar == 1 && qtdMunicao != 0) {
                 if(rand.nextInt(11) < 3){
                     System.out.println("Arma travou!\n *engatilha*");
-                    qtd_balas--;
+                    qtdMunicao--;
                 } else{
-                qtd_balas--;
-                System.out.println("POW!");
+                    qtdMunicao--;
+                    System.out.println("\nPOW!");
                 }
             }
             else {
-                String resp;
+                int resp;
                 System.out.println("A munição acabou.");
-                System.out.println("Deseja recarregar? s/n\n");
-                resp = leia.next();
-                if (resp == "s") {
-                    // chamar metodo de recarregar
+                System.out.println("Deseja recarregar?\n1 - Sim\n2 - Não");
+                resp = leia.nextInt();
+                if (resp == 1) {
+                    qtdMunicao = courrentMag.getQtdMunicao();
                 }
                 else{
                     break;
                 }
             }
         }
-        return qtd_balas;
-    }
-
-    public static void travar() {
-        
     }
 
     public Arma(
@@ -68,8 +69,6 @@ public class Arma extends Item{
             this.tamanho = tamanho;
     }
 
-    public static Scanner getLeia() { return leia; }
-    public static void setLeia(Scanner leia) { Arma.leia = leia; }
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
     public String getTipo() { return tipo; }
@@ -83,4 +82,7 @@ public class Arma extends Item{
     public double getAlcance() { return alcance; }
     public void setAlcance(double alcance) { this.alcance = alcance; }
     public double getTamanho() { return tamanho; }
-    public void setTamanho(double tamanho) { this.tamanho = tamanho; }}
+    public void setTamanho(double tamanho) { this.tamanho = tamanho; }
+
+    public Carregador getCarregador() { return carregador; }
+    public void setCarregador(Carregador carregador) { this.carregador = carregador; }}

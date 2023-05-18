@@ -1,7 +1,10 @@
 package com.firearm.fabricaveis;
 
+import java.util.List;
 import java.util.Scanner;
 
+import com.firearm.acoes.Controlador;
+import com.firearm.acoes.UtilsGuns;
 import com.firearm.fabricaveis.Municao.MunicaoType;
 
 public class Carregador extends Item{
@@ -15,19 +18,11 @@ public class Carregador extends Item{
     int qtdMunicao;
     MunicaoType tipoMunicao;
 
-    public Integer carregar(int qtdMunicao, int capacidade, Municao tipoMunicao) {
-        int resp;
-        System.out.println("\nvc tem " + qtdMunicao + " munições");
-        System.out.println("Deseja encher o carregador?");
-        System.out.println("1 - sim");
-        System.out.println("2 - não");
-        resp = leia.nextInt();
-        if (resp == 1) {
+    public static Carregador carregar(Arma courrentArma, List<Carregador> carregadoresParam) {
+        // verifica se tem um carregador disponível dessa arma
+        Carregador courrentCarregador = Controlador.carregadores.get(UtilsGuns.magCompativel(courrentArma, carregadoresParam));
             System.out.println("\ncarregando...");
-            qtdMunicao = capacidade;
-        }
-        System.out.println("Seu carregador agora tem " + qtdMunicao + " munições");
-        return qtdMunicao;
+        return courrentCarregador;
     }
 
     public Integer descarregar(int qtdMunicao) {
