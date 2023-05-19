@@ -18,13 +18,6 @@ public class Carregador extends Item{
     int qtdMunicao;
     MunicaoType tipoMunicao;
 
-    public static Carregador carregar(Arma courrentArma, List<Carregador> carregadoresParam) {
-        // verifica se tem um carregador disponível dessa arma
-        Carregador courrentCarregador = Controlador.carregadores.get(UtilsGuns.magCompativel(courrentArma, carregadoresParam));
-            System.out.println("\ncarregando...");
-        return courrentCarregador;
-    }
-
     public Integer descarregar(int qtdMunicao) {
         int resp;
         System.out.println("\nVocê tem " + qtdMunicao + " munições");

@@ -52,8 +52,17 @@ public class Controlador {
                     // seleciona a arma
                     int newarma = leia.nextInt() - 1;
                     Arma courrentArma = armas.get(newarma);
-                    
-                    Arma.atirar(courrentArma);
+                    Carregador courrentMag = UtilsGuns.magCompativel(courrentArma, carregadores);
+                    if(courrentMag == null){
+                        System.out.println("Você não tem carregadores compatíveis com a arma");
+                        System.out.println("Gostaria de ir à loja?\n1 - Sim\n2 - Não");
+                        int condition = leia.nextInt();
+                        if (condition == 1) {
+                            Loja.vender();
+                        }
+                    } else{
+                        Arma.atirar(courrentArma, courrentMag);
+                    }
                 } else {
                     System.out.println("Você não possui armas\nGostaria de comprar uma?\n1 - Sim\n2 - Não");
                     int condition = leia.nextInt();

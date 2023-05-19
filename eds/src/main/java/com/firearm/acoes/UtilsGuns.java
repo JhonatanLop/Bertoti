@@ -9,15 +9,16 @@ import com.firearm.fabricaveis.Carregador;
 public class UtilsGuns {
     static Scanner leia = new Scanner(System.in);
 
-    public static int magCompativel(Arma arma, List<Carregador> carregadores) {
-        int indice = 0;
+    public static Carregador magCompativel(Arma arma, List<Carregador> carregadores) {
         int index = 0;
         for (Carregador carregador : carregadores) {
             if (arma.getArmaCalibre() == carregador.getCalibreCarregador()) {
-                index = indice;
+                Carregador courrentMag = carregadores.get(index);
+                return courrentMag;
             }
+            index++;
         }
-        return index;
+        return null;
     }
 
     public static void listagemArma(List<Arma> armas) {
@@ -30,15 +31,5 @@ public class UtilsGuns {
             System.out.println((indice + " - ") + a.getNome() + "\n");
             indice++;
         }
-
-        // confirmação da compra da arma
-        // System.out.println("Gostaria de comprar a arma:");
-        // System.out.println("Nome: " + arma.getNome());
-        // System.out.println("Tipo: " + arma.getTipo());
-        // System.out.println("Marca: " + arma.getMarca());
-        // System.out.println("Calibre: " + arma.getArmaCalibre());
-        // System.out.println("Tamanho: " + arma.getTamanho() + "cm");
-        // System.out.println("Peso: " + arma.getPeso() + "Kg");
-        // System.out.println("Alcance:" + arma.getAlcance() + "m²");
     }
 }

@@ -2,8 +2,6 @@ package com.firearm.fabricaveis;
 
 import java.util.Scanner;
 
-import com.firearm.acoes.Controlador;
-
 import java.util.Random;
 
 public class Arma extends Item{
@@ -19,8 +17,7 @@ public class Arma extends Item{
     Carregador carregador;
 
     
-    public static void atirar(Arma courrentArma) {
-        Carregador courrentMag = Carregador.carregar(courrentArma, Controlador.carregadores);
+    public static void atirar(Arma courrentArma, Carregador courrentMag) {
         String acao = "s";
         Random rand = new Random();
         int qtdMunicao = courrentMag.getQtdMunicao();
