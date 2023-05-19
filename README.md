@@ -39,9 +39,9 @@ Em caso de invasão pela liberdade:
 
 <details>
 <summary> Diagrama UML da atividade </summary>
-<br>  
-
-![UML Bertoti](https://user-images.githubusercontent.com/111443621/229325459-a6142ec7-a53a-42b8-9da7-05361be63bce.png)
+<br>
+  
+![Bertoti](https://github.com/JhonatanLop/Bertoti/assets/111443621/9b8eb1f0-d562-473f-92db-5f53361faf4b)
 
 > V1.5
 </details>
