@@ -27,6 +27,8 @@ liberdade.<br>
 <details>
 <summary> Casos de uso </summary>
 
+  ![Bertoti Casos de uso](https://github.com/JhonatanLop/Bertoti/assets/111443621/7dc4d90c-cf30-484a-bd69-c830833266b6)
+  
 </details>
 
 <details>
