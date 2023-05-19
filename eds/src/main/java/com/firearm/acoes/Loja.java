@@ -46,7 +46,7 @@ public class Loja {
     }
 
     public static void comprarArma(int n, int condition) {
-        List<Arma> armasLoja = Fabrica.getArsenalArmas();
+        List<Arma> armasLoja = Fabrica.arsenalArmas;
         
         UtilsGuns.listagemArma(armasLoja);
         Arma arma = armasLoja.get(n);
@@ -55,7 +55,7 @@ public class Loja {
     }
 
     static public void comprarMag(int n, int condition) {
-        List<Carregador> carregadoresFab = Fabrica.getArsenalMag();
+        List<Carregador> carregadoresFab = Fabrica.arsenalMag;
 
         UtilsGuns.listagemCarregador(carregadoresFab);
         Carregador carregador = Fabrica.arsenalMag.get(n);

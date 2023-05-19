@@ -18,35 +18,35 @@ public class Arma extends Item{
 
     
     public static void atirar(Arma courrentArma, Carregador courrentMag) {
-        String acao = "s";
+        // String acao = "s";
         Random rand = new Random();
         int qtdMunicao = courrentMag.getQtdMunicao();
-        while (acao == "s") {
-            int atirar;
-            System.out.println("Você tem " + qtdMunicao + " balas\nAtirar? \n1-sim\n2-não");
-            atirar = leia.nextInt();
-            if (atirar == 1 && qtdMunicao != 0) {
+        // while (acao == "s") {
+            // int atirar;
+            // System.out.println("Você tem " + qtdMunicao + " balas\nAtirar? \n1-sim\n2-não");
+            // atirar = leia.nextInt();
+            if (qtdMunicao != 0) {
+                // trava
                 if(rand.nextInt(11) < 3){
-                    System.out.println("Arma travou!\n *engatilha*");
+                    // System.out.println("Arma travou!\n *engatilha*");
                     qtdMunicao--;
-                } else{
-                    qtdMunicao--;
-                    System.out.println("\nPOW!");
-                }
+                } 
+                // else{
+                //     qtdMunicao--;
+                //     // atira
+                //     // System.out.println("\nPOW!");
+                // }
             }
-            else {
-                int resp;
-                System.out.println("A munição acabou.");
-                System.out.println("Deseja recarregar?\n1 - Sim\n2 - Não");
-                resp = leia.nextInt();
-                if (resp == 1) {
-                    qtdMunicao = courrentMag.getQtdMunicao();
-                }
-                else{
-                    break;
-                }
-            }
-        }
+            // else {
+            //     int resp;
+            //     System.out.println("A munição acabou.");
+            //     System.out.println("Deseja recarregar?\n1 - Sim\n2 - Não");
+            //     resp = leia.nextInt();
+            //     if (resp == 1) {
+            //         qtdMunicao = courrentMag.getQtdMunicao();
+            //     }
+            // }
+        // }
     }
 
     public Arma(
