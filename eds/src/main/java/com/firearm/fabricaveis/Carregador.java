@@ -1,10 +1,7 @@
 package com.firearm.fabricaveis;
 
-import java.util.List;
 import java.util.Scanner;
 
-import com.firearm.acoes.Controlador;
-import com.firearm.acoes.UtilsGuns;
 import com.firearm.fabricaveis.Municao.MunicaoType;
 
 public class Carregador extends Item{

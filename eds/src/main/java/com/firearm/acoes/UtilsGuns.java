@@ -32,4 +32,16 @@ public class UtilsGuns {
             indice++;
         }
     }
+
+    public static void listagemCarregador(List<Carregador> carregadores) {
+        int indice = 1;
+
+        // lista as armas
+        System.out.println("Lista de Carregadores:");
+        // faz um loop e a cada iteração ele mostra um iten da lista
+        for (Carregador c : carregadores) {
+            System.out.println((indice + " - ") + c.getMarca() + "\n");
+            indice++;
+        }
+    }
 }

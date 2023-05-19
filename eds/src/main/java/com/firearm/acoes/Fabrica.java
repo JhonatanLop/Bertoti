@@ -11,8 +11,8 @@ import com.firearm.fabricaveis.Municao.MunicaoType;
 
 public class Fabrica {
 
-    static List<Arma> arsenalArmas = new ArrayList<>();
-    static List<Carregador> arsenalMag = new ArrayList<>();
+    public static List<Arma> arsenalArmas = new ArrayList<>();
+    public static List<Carregador> arsenalMag = new ArrayList<>();
     static List<Municao> arsenalBullet = new ArrayList<>();
 
     Scanner leia = new Scanner(System.in);
@@ -80,7 +80,7 @@ public class Fabrica {
         arsenalArmas.add(remington870);
     }
 
-    public static void gerarCarregador() {
+    public static void geradorMag() {
         // Carregador da SCAR-H
         Carregador scarHMag = new Carregador(
                 "FN Herstal",

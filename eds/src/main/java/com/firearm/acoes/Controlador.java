@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import com.firearm.fabricaveis.Arma;
 import com.firearm.fabricaveis.Carregador;
+import com.firearm.fabricaveis.Item;
 import com.firearm.fabricaveis.Municao;
 
 public class Controlador {
@@ -14,7 +15,7 @@ public class Controlador {
     static String nome;
     static int idade;
     static Double dinheiro;
-    static List<Arma> armas = new ArrayList<Arma>();
+    public static List<Arma> armas = new ArrayList<Arma>();
     public static List<Carregador> carregadores = new ArrayList<Carregador>();
     static List<Municao> municoes = new ArrayList<Municao>();
 
@@ -30,16 +31,16 @@ public class Controlador {
         Controlador.dinheiro = dinheiro;
     }
 
-    public static void controlarPersonagem() {
+    public static void controlarPersonagem(int decisao, int armaIndex) {
         // Personagem personagem = criarPersonagem();
 
         // menu de utilização
-        System.out.println("\nGostaria de fazer oque?");
-        System.out.println("1 - Comprar equipamentos");
-        System.out.println("2 - Usar equipamentos");
-        int resp = leia.nextInt();
+        // System.out.println("\nGostaria de fazer oque?");
+        // System.out.println("1 - Comprar equipamentos");
+        // System.out.println("2 - Usar equipamentos");
+        // int resp = leia.nextInt();
 
-        switch (resp) {
+        switch (decisao) {
             case 1:
                 Loja.vender();
                 break;
@@ -47,22 +48,15 @@ public class Controlador {
             case 2:
                 if (!Controlador.armas.isEmpty()) {
                     // lista as armas
-                    System.out.println("Suas Armas:");
-                    UtilsGuns.listagemArma(armas);
-                    // seleciona a arma
-                    int newarma = leia.nextInt() - 1;
-                    Arma courrentArma = armas.get(newarma);
-                    Carregador courrentMag = UtilsGuns.magCompativel(courrentArma, carregadores);
-                    if(courrentMag == null){
-                        System.out.println("Você não tem carregadores compatíveis com a arma");
-                        System.out.println("Gostaria de ir à loja?\n1 - Sim\n2 - Não");
-                        int condition = leia.nextInt();
-                        if (condition == 1) {
-                            Loja.vender();
-                        }
-                    } else{
-                        Arma.atirar(courrentArma, courrentMag);
-                    }
+                    
+                    List<Item> equip = selecaoArmaMag(armaIndex);
+
+                    // fazendo conversão de tipos
+                    Arma arma = (Arma) equip.get(0);
+                    Carregador carregador = (Carregador) equip.get(1);
+
+                    Arma.atirar(arma, carregador);
+
                 } else {
                     System.out.println("Você não possui armas\nGostaria de comprar uma?\n1 - Sim\n2 - Não");
                     int condition = leia.nextInt();
@@ -74,6 +68,21 @@ public class Controlador {
             default:
                 break;
         }
+    }
+
+    public static List<Item> selecaoArmaMag(int armaIndex) {
+        List<Item> retorno = new ArrayList<Item>();
+        // lista as armas
+        System.out.println("Suas Armas:");
+        UtilsGuns.listagemArma(armas);
+        // seleciona a arma
+        // int newarma = leia.nextInt() - 1;
+        Arma courrentArma = armas.get(armaIndex);
+        Carregador courrentMag = UtilsGuns.magCompativel(courrentArma, carregadores);
+        retorno.add(courrentArma);
+        retorno.add(courrentMag);
+
+        return retorno;
     }
 
     public static String getNome() { return nome; }
