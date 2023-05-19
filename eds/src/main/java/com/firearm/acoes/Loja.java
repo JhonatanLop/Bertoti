@@ -48,75 +48,18 @@ public class Loja {
     public static void comprarArma(int n, int condition) {
         List<Arma> armasLoja = Fabrica.getArsenalArmas();
         
-        // System.out.println("Selecione uma arma:");
-        // lista as armas
         UtilsGuns.listagemArma(armasLoja);
-        // int n = leia.nextInt();
-        // salva numa variável o objeto na posição selecionada
         Arma arma = armasLoja.get(n);
-        // confirmação da compra da arma
-        // System.out.println("Gostaria de comprar a arma:");
-        // System.out.println("Nome: " + arma.getNome());
-        // System.out.println("Tipo: " + arma.getTipo());
-        // System.out.println("Marca: " + arma.getMarca());
-        // System.out.println("Calibre: " + arma.getArmaCalibre());
-        // System.out.println("Tamanho: " + arma.getTamanho() + "cm");
-        // System.out.println("Peso: " + arma.getPeso() + "Kg");
-        // System.out.println("Alcance:" + arma.getAlcance() + "m²");
-
-        // System.out.println("\n1 - Sim\n2 - Não");
-        // int condition = leia.nextInt();
-
-        // if (condition == 1) {
-        //     // adiciona arma na lista
-            Controlador.armas.add(arma);
-        //     // retira arma da lista no indice selecionado
-            Fabrica.arsenalArmas.remove(n);
-        //     // System.out.println("Parabens pela compra!!");
-        // } else {
-        //     // System.out.println("Ok, volte sempre!");
-        // }
+        Controlador.armas.add(arma);
+        Fabrica.arsenalArmas.remove(n);
     }
 
     static public void comprarMag(int n, int condition) {
         List<Carregador> carregadoresFab = Fabrica.getArsenalMag();
 
         UtilsGuns.listagemCarregador(carregadoresFab);
-        // lista os carregadores
-        // System.out.println("Lista de Carregadores:");
-        // faz um loop e a cada iteração ele mostra um item da lista
-        // for (Carregador c : Fabrica.getArsenalMag()) {
-        //     System.out.println((indice + " - ") + c.getMarca() + "\n");
-        //     indice++;
-        // }
-
-        // seleciona uma arma
-        // System.out.println("Selecione uma Carregador:");
-        // int carregadorIndex = leia.nextInt();
         Carregador carregador = Fabrica.arsenalMag.get(n);
-
-        // compra arma
-        // System.out.println("Gostaria de comprar o Carregador ");
-        // // confirmação de compra
-        // System.out.println("Marca: " +carregador.getMarca());
-        // System.out.println("Cor do Transportador: " +carregador.getCorTransportador());
-        // System.out.println("Alinhamento: " +carregador.getTipoAlinhamento());
-        // System.out.println("Calibre: " +carregador.getCalibreCarregador());
-        // System.out.println("Capacidade: " +carregador.getCapacidade());
-        // System.out.println("Munições: " +carregador.getQtdMunicao());
-        // System.out.println("Tipo de Munição: " +carregador.getTipoMunicao());
-
-        // System.out.println("\n1 - Sim\n2 - Não");
-        // // int condition = leia.nextInt();
-        // if (condition == 1) {
-        //     // adiciona na lista
-            Controlador.carregadores.add(carregador);
-        //     // remove da loja
-            carregadoresFab.remove(carregador);
-        //     // System.out.println("Parabens pela compra!!");
-        // } 
-        //else {
-        //     // System.out.println("Ok, volte sempre!");
-        // }
+        Controlador.carregadores.add(carregador);
+        carregadoresFab.remove(carregador);
     }
 }
