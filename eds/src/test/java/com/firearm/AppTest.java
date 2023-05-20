@@ -8,7 +8,6 @@ import com.firearm.acoes.Loja;
 import com.firearm.acoes.UtilsGuns;
 import com.firearm.fabricaveis.Arma;
 import com.firearm.fabricaveis.Carregador;
-import com.firearm.fabricaveis.Item;
 import com.firearm.fabricaveis.Municao.MunicaoType;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -71,6 +70,8 @@ class AppTest {
             MunicaoType.FULL_METAL_JACKET);
         
         Arma.atirar(scarH, scarHMag);
+        assertEquals(19,scarHMag.getCapacidade() - 1);
+    
     }
 
     @Test
@@ -106,6 +107,7 @@ class AppTest {
                 MunicaoType.FULL_METAL_JACKET);
         carregadores.add(glockMag);
 
-        UtilsGuns.magCompativel(scarH, carregadores);
+        Carregador courrentMag = UtilsGuns.magCompativel(scarH, carregadores);
+        assertEquals(scarH.getArmaCalibre(),courrentMag.getCalibreCarregador());
     }
 }

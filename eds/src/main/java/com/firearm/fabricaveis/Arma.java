@@ -17,7 +17,7 @@ public class Arma extends Item{
     Carregador carregador;
 
     
-    public static void atirar(Arma courrentArma, Carregador courrentMag) {
+    public static int atirar(Arma courrentArma, Carregador courrentMag) {
         // String acao = "s";
         Random rand = new Random();
         int qtdMunicao = courrentMag.getQtdMunicao();
@@ -47,6 +47,7 @@ public class Arma extends Item{
             //     }
             // }
         // }
+        return qtdMunicao;
     }
 
     public Arma(
