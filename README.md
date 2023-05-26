@@ -17,8 +17,8 @@ Uma arma de fogo pode ser usada como uma ferramenta para autodefesa ou prática 
 <details>
 <summary> Casos de uso </summary>
 
-  ![Bertoti Casos de uso](https://github.com/JhonatanLop/Bertoti/assets/111443621/7dc4d90c-cf30-484a-bd69-c830833266b6)
-  
+![casos de uso](https://github.com/JhonatanLop/Bertoti/assets/111443621/9ee14346-f11a-49e3-babc-b49a587d35cd)
+
 </details>
 
 <details>
@@ -27,5 +27,5 @@ Uma arma de fogo pode ser usada como uma ferramenta para autodefesa ou prática 
   
 ![Bertoti](https://github.com/JhonatanLop/Bertoti/assets/111443621/9b8eb1f0-d562-473f-92db-5f53361faf4b)
 
-> V1.5
+> V1.8
 </details>
