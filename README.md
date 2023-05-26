@@ -27,5 +27,11 @@ Uma arma de fogo pode ser usada como uma ferramenta para autodefesa ou prática 
   
 ![Bertoti](https://github.com/JhonatanLop/Bertoti/assets/111443621/9b8eb1f0-d562-473f-92db-5f53361faf4b)
 
-> V1.8
 </details>
+
+## Trade-off
+Trade-off, ou troca, é um conceito utilizado para descrever a situação em que você precisa fazer uma escolha entre duas ou mais opções que têm vantagens e desvantagens distintas. Quando você opta por uma dessas opções, está abrindo mão dos benefícios oferecidos pelas outras opções disponíveis.<br>
+<br>
+Um exemplo de Trade-off entre desenvolvimento em cascata e desenvolvimento ágil:<br>
+<br>
+Ao escolher o modelo em cascata, você pode obter uma estrutura e documentação mais rigorosas, mas pode enfrentar dificuldades se houver mudanças de requisitos ou feedback do cliente durante o processo. Por outro lado, ao optar pelo modelo ágil, você pode ser mais flexível em relação a mudanças e feedback, mas pode enfrentar desafios na gestão do processo e garantia de qualidade, especialmente em projetos complexos ou com requisitos rígidos.
