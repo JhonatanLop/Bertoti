@@ -9,7 +9,7 @@ e desvios na operação destes produtos, para, a partir daí, otimizar sua perfo
 ### <u>Tema da atividade individual:</u>
 Armas de fogo!
 
-### <u>Casos de uso</u>
+## <u>Casos de uso</u>
 As classes descrevem detalhes de uma arma de fogo, seus métodos descrevem seus funcionamentos.<br>
 Uma arma de fogo pode ser usada como uma ferramenta para autodefesa ou prática esportiva<br>
 > Atualmente, o Estatuto do Desarmamento (Lei 10.826/03) proíbe a venda de arma de fogo ao cidadão comum com menos de 25 anos de idade.
