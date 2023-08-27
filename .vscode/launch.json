@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "SburRestDemoApplication",
+            "request": "launch",
+            "mainClass": "com.thehecklers.sburrestdemo.SburRestDemoApplication"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SburRestDemoApplication<sbur-rest-demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.thehecklers.sburrestdemo.SburRestDemoApplication",
+            "projectName": "sbur-rest-demo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

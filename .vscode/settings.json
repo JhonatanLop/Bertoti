@@ -3,5 +3,6 @@
         "Engenharia de Software",
         "Atividades",
         "eds/src/main/java/com/firearm"
-    ]
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
 }
