@@ -30,4 +30,11 @@ public class Coffee {
 
     @Embedded
     private Endereco enderecoEntrega;
+
+    public Coffee(DadosCoffe dados){
+        this.nome = dados.nome();
+        this.descricao = dados.descricao();
+        this.preco = dados.preco();
+        this.enderecoEntrega = new Endereco(dados.enderecoEntrega());
+    }
 }

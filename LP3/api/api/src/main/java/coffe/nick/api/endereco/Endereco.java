@@ -16,4 +16,13 @@ public class Endereco {
     private String numero;
     private String cidade;
     private String uf;
+
+    public Endereco (ReEndereco dadosEndereco){
+        this.nomeEndereco = dadosEndereco.nomeEndereco();
+        this.rua = dadosEndereco.rua();
+        this.bairro = dadosEndereco.bairro();
+        this.numero = dadosEndereco.numero();
+        this.cidade = dadosEndereco.cidade();
+        this.uf = dadosEndereco.uf();
+    }
 }
