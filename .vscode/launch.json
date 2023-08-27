@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ApiApplication",
+            "request": "launch",
+            "mainClass": "coffe.nick.api.ApiApplication",
+            "projectName": "api"
+        },
+        {
+            "type": "java",
             "name": "SburRestDemoApplication",
             "request": "launch",
             "mainClass": "com.thehecklers.sburrestdemo.SburRestDemoApplication"
