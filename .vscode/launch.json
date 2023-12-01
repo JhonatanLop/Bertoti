@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ListApplication",
+            "request": "launch",
+            "mainClass": "com.todo.list.ListApplication"
+        },
+        {
+            "type": "java",
             "name": "ApiApplication",
             "request": "launch",
             "mainClass": "coffe.nick.api.ApiApplication",

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sytle.css" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Lista de tarefas</title>
+</head>
+
+<body class="page">
+    <header>
+        <Nav class="menu">
+            <button class="menu_item" id="insert_task"><img src="./icons/plus.png"></button>
+            <!-- <button class="menu_item"><img src="./icons/gear.png"></button> -->
+            <div class="input_search">
+                <button id="search_button">
+                    <img src="./icons/loupe.png" alt="icone de lupa">
+                </button>
+                <input type="text" id="search" class="field_search" placeholder="Pesquisar por Nome">
+            </div>
+        </Nav>
+    </header>
+    <main>
+        <section id="panel" class="panel">
+        </section>
+        <div id="teste"></div>
+    </main>
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Nova Tarefa</h2>
+            <form id="taskForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="description">Descrição:</label>
+                <textarea id="description" name="description"></textarea><br><br>
+
+                <label for="dueDate">Data de Vencimento:</label>
+                <input type="date" id="dueDate" name="dueDate"><br><br>
+
+                <label for="completed">Concluída:</label>
+                <input type="checkbox" id="completed" name="completed"><br><br>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Atualizar Tarefa</h2>
+            <form id="updateTaskForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="updateName" name="updateName" required><br><br>
+
+                <label for="description">Descrição:</label>
+                <textarea id="updateDescription" name="updateDescription"></textarea><br><br>
+
+                <label for="dueDate">Data de Vencimento:</label>
+                <input type="date" id="updateDueDate" name="updateDueDate"><br><br>
+
+                <label for="completed">Concluída:</label>
+                <input type="checkbox" id="updateCompleted" name="updateCompleted"><br><br>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="./scripts/script.js"></script>
+
+</html>

@@ -1,0 +1,1 @@
+alter table task alter column tsk_finish_date drop not null;
