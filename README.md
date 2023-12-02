@@ -35,3 +35,27 @@ Trade-off, ou troca, é um conceito utilizado para descrever a situação em que
 Um exemplo de Trade-off entre desenvolvimento em cascata e desenvolvimento ágil:<br>
 <br>
 Ao escolher o modelo em cascata, você pode obter uma estrutura e documentação mais rigorosas, mas pode enfrentar dificuldades se houver mudanças de requisitos ou feedback do cliente durante o processo. Por outro lado, ao optar pelo modelo ágil, você pode ser mais flexível em relação a mudanças e feedback, mas pode enfrentar desafios na gestão do processo e garantia de qualidade, especialmente em projetos complexos ou com requisitos rígidos.
+
+
+-----------
+
+# Todo - atividade
+> ultima atualização: 01/12/2023
+
+## Oque é?
+é uma aplicação java spring-boot com integração com banco de dados postgres.<br>
+um lugar onde você pode organizar suas tarefas de forma rápida e os dados serão salvos em um banco de dados relacional
+
+## Ferramentas utilizadas
+[Java 21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
+[spring-boot 3.2.0](https://start.spring.io/)
+[postgres 15](https://www.postgresql.org/download/)
+
+## Como rodar?
+> certifique-se de ter o postgres instalado
+1. clone o repositório localmente usando o comando:
+```git clone https://github.com/JhonatanLop/Bertoti.git```
+2. abra o terminal na pasta de download ```Bertoti/demo```
+3. altere o arquivo ```demo/src/main/resources/application.properties``` com os dados do seu banco
+4. no terminal digite o comando ```mvn spring-boot:run```
+5. no navegador, digite o endereço: ```http://localhost:8080```
