@@ -16,6 +16,13 @@ public class Box implements Content{
         this.recibo = recibo;
     }
 
+    /**
+    * Empacota o conteúdo da caixa com o destino e recibo especificados.
+    * 
+    * @param destino O destino para onde a caixa será enviada.
+    * @param conteudo A lista de conteúdos a serem empacotados. A lista pode conter qualquer tipo que seja uma subclasse de Content.
+    * @param recibo O recibo associado ao empacotamento da caixa.
+    */
     public void empacotar(String destino, List<? extends Content> conteudo, String recibo){
         this.setDestino(destino);
         this.setConteudo(new ArrayList<>(conteudo));
