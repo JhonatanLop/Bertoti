@@ -1,23 +1,25 @@
 package composite.pattern.java;
 
-public class Box {
-    String destino;
-    String recibo;
-    ContentBox[] subPacotes;
-    Box[] pacotes;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Box implements Content{
+    private String destino;
+    private String recibo;
+    private List<Content> conteudo;
     
     // caixa com objetos
-    public Box(String destino, ContentBox[] subPacotes, String recibo){
+    public Box(String destino, List<Content> conteudo, String recibo){
         this.destino = destino;
-        this.subPacotes = subPacotes;
+        this.conteudo = conteudo;
         this.recibo = recibo;
     }
 
-    // caixas com outras caixas
-    public Box(String destino, Box[] pacotes, String recibo){
-        this.destino = destino;
-        this.pacotes = pacotes;
-        this.recibo = recibo;
+    public void empacotar(String destino, List<? extends Content> conteudo, String recibo){
+        this.setDestino(destino);
+        this.setConteudo(new ArrayList<>(conteudo));
+        this.setRecibo(recibo);
     }
 
     public void despachar(){
@@ -28,12 +30,22 @@ public class Box {
         ContentBox obj1 = new ContentBox("notebook");
         ContentBox obj2 = new ContentBox("carregador");
         ContentBox obj3 = new ContentBox("mouse");
-        
-        Box notebook = new Box("jhow",new ContentBox[]{obj1,obj2}, "ReciboA");
-        Box mouse = new Box("jhow",new ContentBox[]{obj3}, "ReciboB");
 
-        Box encomenda = new Box("jhow",new Box[]{notebook,mouse},"ReciboC");
+        Box caixa1 = new Box(null,null,null);
+        Box caixa2 = new Box(null,null,null);
+        Box caixa3 = new Box(null,null,null);
+
+        caixa1.empacotar("jhow",Arrays.asList(obj1,obj2),"ReciboA");
+        caixa2.empacotar("jhow",Arrays.asList(obj3),"ReciboB");
+        caixa3.empacotar("jhow",Arrays.asList(caixa1,caixa2),"ReciboAB");
         
-        encomenda.despachar();
+        caixa3.despachar();
     }
+
+    public void setDestino(String destino) { this.destino = destino; }
+    public void setRecibo(String recibo) { this.recibo = recibo; }
+    public void setConteudo(List<Content> conteudo) { this.conteudo = conteudo; }
+    public String getDestino() { return destino; }
+    public String getRecibo() { return recibo; }
+    public List<Content> getConteudo() { return conteudo; }
 }

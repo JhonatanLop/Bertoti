@@ -1,6 +1,6 @@
 package composite.pattern.java;
 
-public class ContentBox{
+public class ContentBox implements Content{
     String objeto;
 
     public ContentBox(String objeto) {
