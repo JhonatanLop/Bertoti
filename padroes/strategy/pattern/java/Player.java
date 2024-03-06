@@ -21,14 +21,11 @@ public class Player {
         Shield snakShield = new Shield("Snake Shield",50.8, 650.4, 200);
         Bow bambooBow = new Bow("Bamboo bow", 30, 795.8, 80);
 
-        Player p1 = new Player("jhow",swordWeapon, snakShield, 50);        
+        Player p1 = new Player("jhow",swordWeapon, snakShield, 50);
 
-        SwordStrategy hand1 = new SwordStrategy(swordWeapon);
-
-        System.out.println("atacando com espada");
-        System.out.printf("Atacando com: %s\nDano: %f\n", p1.getHand1().getName());
+        System.out.printf("Atacando com: %s\nDano: %f\n", p1.getHand1().getName(),p1.getHand1().action());
         System.out.println("Defendendo com Escudo");
-        System.out.printf("Dano recebido: %f");
+        System.out.printf("Dano recebido: %f",p1.getHand2().defeat(542.4));
     }
 
     public String getName() { return name; }

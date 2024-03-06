@@ -7,6 +7,9 @@ public abstract class Weapon{
         durability += parts;
     }
 
+    public abstract double action();
+    public abstract double defeat(double damage);
+
     public String getName() { return name; }
     public double getDamage() { return damage; }
     public int getDurability() { return durability; }
