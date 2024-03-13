@@ -1,33 +1,38 @@
-public class Bow extends Weapon implements Strategy{
+
+public class Bow implements Weapon {
+    private String name;
+    private double damage;
+    private int durability;
     private int ammo;
 
-    public Bow(String name, int ammo, double damage, int durability) {
+
+    public Bow(String name, double damage, int durability, int ammo) {
         this.name = name;
-        this.ammo = ammo;
         this.damage = damage;
         this.durability = durability;
+        this.ammo = ammo;
     }
 
-    public double action(){
-        // sem munição
+    public double use() {
         if (getAmmo() == 0) {
-            return 0.0;
+            return 0;
         }
-        // arma quebrada retorna 10% do dano
         if (getDurability() == 0) {
             return 0.1 * getDamage();
         }
         return getDamage();
     }
-    
-    public double defeat(double damage){
-        if (getDurability() == 0) {
-            return (damage * 0.9);
-        }
-        return (damage - (damage * 0.5));
+
+    public void repair(int parts){
+        setDurability(parts + getDurability());
     }
 
+    public String getName() { return name; }
+    public double getDamage() { return damage; }
+    public int getDurability() { return durability; }
     public int getAmmo() { return ammo; }
+    public void setName(String name) { this.name = name; }
+    public void setDamage(double damage) { this.damage = damage; }
+    public void setDurability(int durability) { this.durability = durability; }
     public void setAmmo(int ammo) { this.ammo = ammo; }
-    
 }
