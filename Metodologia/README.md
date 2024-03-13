@@ -34,3 +34,11 @@ Trabalho de Aprendizagem a partir de Projeto Integrador (APIs), apresentado à F
         <a href="https://github.com/JhonatanLop/JhonatanLop"> Github </a> •
         <a href="www.linkedin.com/in/jhonatan-o-lopes"> Linkedin </a>•
 </div>
+
+---
+
+<h2 id = "o-projeto"> Ferramenta para controle de Horas Extras e Sobreavisos </h2>
+<h4> 3º semestre • 2022 • <a href="https://github.com/projetoKhali/api3/blob/main/README.md">Repositório Github</a><h4>
+<p>Parceiro Acadêmico: <a href = "https://2rpnet.com.br/">2RP Net</a></p>
+
+<p align="center"><img src="src/banner.png"><p>
