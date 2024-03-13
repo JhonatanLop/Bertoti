@@ -1,32 +1,27 @@
-public class Shield extends Weapon implements Strategy{
+
+
+public class Shield implements Weapon {
+    private String name;
     private double defeat;
+    private int durability;
 
-    public Shield (
-        String name,
-        double damage,
-        double defeat,
-        int durability
-        ){
-            this.name = name;
-            this.damage = damage;
-            this.defeat= defeat;
-            this.durability = durability;
+
+    public double use() {
+        if (getDurability() == 0) {
+            return (getDefeat() * 0.1);
         }
-
-        public double action() {
-            if (getDurability() == 0) {
-                return (getDamage() * 0.1);
-            }
-            return getDamage();
-        }
-
-        public double defeat(double damage){
-            if (getDurability() == 0) {
-                return (damage * 0.9);
-            }
-            return ((damage - getDefeat() <= 0) ? 0 : damage - getDefeat() );
-        }
-
-        public double getDefeat() { return defeat; }
-        public void setDefeat(double defeat) { this.defeat = defeat; }
+        return getDefeat();
     }
+
+    public void repair(int parts) {
+        setDurability(getDurability() + parts);
+    }
+
+    public String getName() { return name; }
+    public double getDefeat() { return defeat; }
+    public int getDurability() { return durability; }
+    public void setName(String name) { this.name = name; }
+    public void setDefeat(double defeat) { this.defeat = defeat; }
+    public void setDurability(int durability) { this.durability = durability; }
+
+}
