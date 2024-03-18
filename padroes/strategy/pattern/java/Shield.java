@@ -6,6 +6,12 @@ public class Shield implements Weapon {
     private int durability;
 
 
+    public Shield(String name, double defeat, int durability) {
+        this.name = name;
+        this.defeat = defeat;
+        this.durability = durability;
+    }
+
     public double use() {
         if (getDurability() == 0) {
             return (getDefeat() * 0.1);

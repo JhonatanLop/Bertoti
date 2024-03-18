@@ -1,5 +1,3 @@
-
-
 public class Sword implements Weapon{
     private String name;
     private boolean isTwoHands;
