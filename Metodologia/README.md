@@ -8,7 +8,7 @@ Trabalho de Aprendizagem a partir de Projeto Integrador (APIs), apresentado à F
 <details>
 <summary><a href="#o-projeto"> API 3º Semestre </a></summary>
         <ul><a href="arquitetura"> Arquitetura do projeto </a></ul>
-        <ul><a href="solucao"> Prévia da solução </a></ul>
+        <ul><a href="solucao"> Sobre o projeto </a></ul>
         <ul><a href="tecnologias"> Tecnologias utilizadas </a></ul>
         <ul><a href="contribuicoes"> Contribuições pessoais </a></ul>
         <ul><a href="licoes"> Lições aprendidas </a></ul>
@@ -41,4 +41,28 @@ Trabalho de Aprendizagem a partir de Projeto Integrador (APIs), apresentado à F
 <h4> 3º semestre • 2022 • <a href="https://github.com/projetoKhali/api3/blob/main/README.md">Repositório Github</a><h4>
 <p>Parceiro Acadêmico: <a href = "https://2rpnet.com.br/">2RP Net</a></p>
 
-<p align="center"><img src="src/banner.png"><p>
+<p align="center"><img src="src/banner.png"></p>
+
+<h3 id = "solucao"> Prévia da solução </h2>
+
+O objetivo era fazer um sistema que fizesse o controle da jornada de trabalho do colaborador, ajudar a identificar e classificar as horas extras e sobreavisos.<br>
+
+O sistema permite que os colaboradores registrem suas horas de entrada e saída, além de fornecer uma interface para a classificação das horas como horas extras ou sobreavisos. Ele também gera relatórios e estatísticas sobre as horas trabalhadas. <br>
+
+Para isso, as APIs de cadastro de horas extras enviam essas horas para um central de processamento, onde as horas são dividades de acordo com as regras de negócios específicas préviamente configuradas pelo perfil Administrador. As horas já divididas e classificadas seriam então salvas no banco de dados.<br>
+<br>
+
+<h3 id = "tecnologias">Tecnologias utilizadas</h3>
+
+#### Back-End
+>* [Java 17](https://www.oracle.com/br/java/technologies/downloads/#jdk17-windows).
+>* [Spring](https://spring.io/).
+>* [Docker](https://www.docker.com/) com [Docker Compose](https://docs.docker.com/compose/).
+>* [PostgreSQL](https://www.postgresql.org/) banco de dados escolhido.
+<br>
+
+#### Front-End
+> * [React](https://react.dev/).
+> * [Typescript](https://www.typescriptlang.org).
+
+<h2> Contribuições Pessoais </h2>
