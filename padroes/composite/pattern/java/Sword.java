@@ -54,7 +54,7 @@ public class Sword implements Component{
         sword1Sword.addPart(deadEye);
         sword1Sword.addPart(lastWish);
 
-        System.out.printf("Dano total de %s: %s", sword1Sword.getName(), sword1Sword.getDammage());
+        System.out.printf("Dano total de %s: %s", sword1Sword.getName(), sword1Sword.use());
 
     }
 

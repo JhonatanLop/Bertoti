@@ -12,8 +12,7 @@ public class Parts implements Component {
         this.description = description;
         this.dammage = dammage;
     }
-    
-    @Override
+
     public void describe() {
         System.out.printf("Name: %s\n",getName());
         System.out.printf("Description: %s\n",getDescription());
