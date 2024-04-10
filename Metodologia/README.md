@@ -19,7 +19,7 @@ Trabalho de Aprendizagem a partir de Projeto Integrador (APIs), apresentado à F
 
 <h2 id="sobre-mim"> Sobre mim </h2>
 <div align="center">
-  <img height="260em" alig src="https://github.com/JhonatanLop/JhonatanLop/assets/111443621/29e53362-8eeb-4ab2-af47-0fa9bdb609a4">
+  <img height="260em" alig src="./src/foto.png">
   <p>Jhonatan Oliveira Lopes</p>
   <br>  
 </div>
