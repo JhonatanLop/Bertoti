@@ -55,7 +55,7 @@ Para isso, as APIs de cadastro de horas extras enviam essas horas para um centra
 <h3 id = "tecnologias">Tecnologias utilizadas</h3>
 
 #### Back-End
->* [Java 17](https://www.oracle.com/br/java/technologies/downloads/#jdk17-windows).linguagem para desenvolvimento da aplicação para back-end.
+>* [Java 17](https://www.oracle.com/br/java/technologies/downloads/#jdk17-windows).
 >* [Spring](https://spring.io/).
 >* [Docker](https://www.docker.com/) com [Docker Compose](https://docs.docker.com/compose/).
 >* [PostgreSQL 15](https://www.postgresql.org/) banco de dados escolhido.
