@@ -55,10 +55,10 @@ Para isso, as APIs de cadastro de horas extras enviam essas horas para um centra
 <h3 id = "tecnologias">Tecnologias utilizadas</h3>
 
 #### Back-End
->* [Java 17](https://www.oracle.com/br/java/technologies/downloads/#jdk17-windows).
+>* [Java 17](https://www.oracle.com/br/java/technologies/downloads/#jdk17-windows).linguagem para desenvolvimento da aplicação para back-end.
 >* [Spring](https://spring.io/).
 >* [Docker](https://www.docker.com/) com [Docker Compose](https://docs.docker.com/compose/).
->* [PostgreSQL](https://www.postgresql.org/) banco de dados escolhido.
+>* [PostgreSQL 15](https://www.postgresql.org/) banco de dados escolhido.
 <br>
 
 #### Front-End
@@ -66,3 +66,11 @@ Para isso, as APIs de cadastro de horas extras enviam essas horas para um centra
 > * [Typescript](https://www.typescriptlang.org).
 
 <h2> Contribuições Pessoais </h2>
+
+<p>No meu papel como Desenvolvedor, dediquei-me exclusivamente ao desenvolvimento back-end, desempenhando atividades que abrangem desde a criação dos controladores e classes até a modelagem e implementação do banco de dados. Empreguei todas as normas, recursos e convenções essenciais para garantir a robustez e eficiência de um banco de dados exemplar, assegurando assim a integridade e a performance do sistema como um todo.</p>
+
+<h2> Lições Aprendidas </h2>
+
+<p>
+Tive meu primeiro contato com Spring boot e no desenvolvimento de APIs e pude aprimorar minhas habilidades de DBA na modelagem do banco de dados inteiro.
+</p>
