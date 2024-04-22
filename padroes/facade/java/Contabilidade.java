@@ -1,14 +1,15 @@
-package facade;
+package facade.java;
 
 public class Contabilidade {
     private double gastos;
     private double caixa;
     private double lucro;
     
-    public Contabilidade(double gastos, double caixa, double lucro) {
-        this.gastos = gastos;
-        this.caixa = caixa;
-        this.lucro = lucro;
+    public Contabilidade() {
+    }
+
+    public void calcularLucro() {
+        setLucro(getCaixa() - getGastos());
     }
 
     public double getGastos() {

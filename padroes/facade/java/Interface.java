@@ -1,4 +1,4 @@
-package facade;
+package facade.java;
 
 public class Interface {
     private String pedido;
@@ -11,18 +11,28 @@ public class Interface {
         this.valor = valor;
     }
 
-    public double fazerPedido(){
+    public void fazerPedido(){
         System.out.println("Fazendo pedido...");
         Pedido pedido = new Pedido(getPedido(), getValor());
-        System.out.println("enviando para a cozinha...");
-        Cozinha cozinha = new Cozinha();
-        Caixa caixa = new Caixa();
-        cozinha.fazerPedido(pedido);
-        double troco = caixa.getTroco(pedido);
+        System.out.println("enviando para a cozinha...\n");
+        enviarCozinha(pedido);
 
+        System.out.println("contabilidade");
+        
         System.out.println("total a pagar: ");
+        chamarCaixa(pedido, getPagamento());
+
     }
 
+    public void enviarCozinha(Pedido pedido){
+        Cozinha cozinha = new Cozinha();
+        cozinha.fazerPedido(pedido);
+    }
+
+    public double chamarCaixa(Pedido pedido, double pagamento) {
+        Caixa caixa = new Caixa();
+        return caixa.getTroco(pedido, pagamento);
+    }
     public String getPedido() {
         return pedido;
     }
