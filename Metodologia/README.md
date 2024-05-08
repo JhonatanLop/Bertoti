@@ -122,10 +122,6 @@ try (PrintWriter writer = response.getWriter()) {
 
     csvWriter.writeNext(header.toArray(String[]::new));
 
-    // Use a biblioteca Jackson para serializar a lista em JSON
-    ObjectMapper objectMapper = new ObjectMapper();
-    List<String> jsonData = new ArrayList<>();
-
     List<String> data = new ArrayList<>();
     for (Appointment apt : allAppointments) {
         Timestamp total = new Timestamp(apt.getEndDate().getTime() - apt.getStartDate().getTime());
