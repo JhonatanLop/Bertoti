@@ -4,8 +4,6 @@ Trabalho de Aprendizagem a partir de Projeto Integrador (APIs), apresentado à F
 
 ---
 
-
-<details>
 <summary><a href="#o-projeto"> API 3º Semestre </a></summary>
         <ul><a href="arquitetura"> Arquitetura do projeto </a></ul>
         <ul><a href="solucao"> Sobre o projeto </a></ul>
@@ -13,9 +11,6 @@ Trabalho de Aprendizagem a partir de Projeto Integrador (APIs), apresentado à F
         <ul><a href="contribuicoes"> Contribuições pessoais </a></ul>
         <ul><a href="licoes"> Lições aprendidas </a></ul>
         <ul><a href="consideracoes"> Considerações finais </a></ul>
-</details>
-
----
 
 <h2 id="sobre-mim"> Sobre mim </h2>
 <div align="center">
@@ -67,10 +62,127 @@ Para isso, as APIs de cadastro de horas extras enviam essas horas para um centra
 
 <h2> Contribuições Pessoais </h2>
 
-<p>No meu papel como Desenvolvedor, dediquei-me exclusivamente ao desenvolvimento back-end, desempenhando atividades que abrangem desde a criação dos controladores e classes até a modelagem e implementação do banco de dados. Empreguei todas as normas, recursos e convenções essenciais para garantir a robustez e eficiência de um banco de dados exemplar, assegurando assim a integridade e a performance do sistema como um todo.</p>
+<h3> Back-End </h3>
+
+<details>
+<summary> Criptografia </summary>
+<p>desenvolvi o método para criptografia das senhas dos usuários</p>
+<p>O objetivo é aumentar a segurança e a privacidade do usuário. Ao invéz de a senha ser salva diretamente no banco como ela é, ela passa por um processo de criptografia oque garente que nem o pessoal com acesso direto ao banco de dados consiga vê-la</p>
+<p>Com isso também tive que fazer modificações nos métodos de login para comparação de input de senha criptografada com o hash da senha salvo no banco de dados</p>
+
+```java
+public static String encode(String input) {
+    try {
+        MessageDigest md = MessageDigest.getInstance("MD5");
+
+        byte[] bytes = input.getBytes();
+        byte[] digest = md.digest(bytes);
+
+        StringBuilder sb = new StringBuilder();
+        for (byte b : digest) {
+                sb.append(String.format("%02x", b));
+        }
+
+        return sb.toString();
+    } catch (NoSuchAlgorithmException e) {
+        e.printStackTrace();
+        return null;
+    }
+}
+```
+
+```java
+    @PostMapping
+    public User createUser(@RequestBody User user) {    
+        user.setPassword(Cryptography.encode(user.getRegistration()));
+        return userRepository.save(user);
+    }
+
+    @PostMapping("/login")
+    public User login(@RequestBody LoginRequest loginRequest) {
+        return userService.getValidatedUser(loginRequest.getEmail(), Cryptography.encode(loginRequest.getPassword()));
+    }
+```
+</details>
+
+<br>
+
+<details>
+    <summary> Extração de relatório </summary>
+<p>A extração de relatório era um requisito do cliente. O objetivo era poder extrair em um relatório .csv dos apontamentos lançados no sistema.</p>
+<p>Como "plus", também foi feito um filtro das colunas possíves de serem geradas, onde é possível excluir alguns dos dados caso fosse pertinente</p>
+
+```java
+try (PrintWriter writer = response.getWriter()) {
+    CSVWriter csvWriter = new CSVWriter(writer);
+
+    List<String> header = new ArrayList<>();
+
+    for (int i = 0; i < headers.length; i++) { if (camposBoolean[i]) { header.add(headers[i]); }}
+
+    csvWriter.writeNext(header.toArray(String[]::new));
+
+    // Use a biblioteca Jackson para serializar a lista em JSON
+    ObjectMapper objectMapper = new ObjectMapper();
+    List<String> jsonData = new ArrayList<>();
+
+    List<String> data = new ArrayList<>();
+    for (Appointment apt : allAppointments) {
+        Timestamp total = new Timestamp(apt.getEndDate().getTime() - apt.getStartDate().getTime());
+        if (camposBoolean[1]) data.add(apt.getUser().getRegistration());
+        if (camposBoolean[2]) data.add(apt.getUser().getName());
+        if (camposBoolean[3]) data.add(apt.getStartDate().toString());
+        if (camposBoolean[4]) data.add(apt.getEndDate().toString());
+        if (camposBoolean[5]) data.add(total.toString());
+        if (camposBoolean[6]) data.add(apt.getType().toString());
+        if (camposBoolean[7]) data.add(apt.getResultCenter().getName());
+        if (camposBoolean[8]) data.add(apt.getClient().getName());
+        if (camposBoolean[9]) data.add(apt.getProject().getName());
+        if (camposBoolean[10]) data.add(apt.getJustification());
+
+        csvWriter.writeNext(data.toArray(new String[0]));
+    }
+
+    csvWriter.close();
+}
+```
+</details>
+
+<br>
+
+<details>
+    <summary> Controller de Projeto</summary>
+<p>O Projeto é um dos dados a ser inseridos no apontamento. Para a seleção de um projeto na hora do lançamento de um apontamento é necessário que ele esteja cadastrado no banco de dados.</p>
+<p>Para isso foi necessário criar os endpoints para fazer a manipulação dos projetos. Cadastrar, excluir, editar e visualizar</p>
+
+```java
+@RestController
+@RequestMapping("/projects")
+public class ProjectController {
+
+    @Autowired private ProjectRepository projectRepository;
+
+    public ProjectController(ProjectRepository projectRepository) {
+        this.projectRepository = projectRepository;
+    }
+
+    @PostMapping
+    public Project createProject(@RequestBody Project project) {
+        return projectRepository.save(project);
+    }
+
+    @GetMapping()
+    public List<Project> getAllProjects(){
+        return projectRepository.findAllActiveProjects();
+    }
+}
+```
+
+</details>
 
 <h2> Lições Aprendidas </h2>
 
+<p>Como foi minha primeira vez sendo PO e trabalhando com APIs foi muito desafiador na hora de criar as tarefas e entender realmente oque deveria ser feito e como deveria ser feito. O desenvolvimento de APIs pra </p>
 <p>
 Tive meu primeiro contato com Spring boot e no desenvolvimento de APIs e pude aprimorar minhas habilidades de DBA na modelagem do banco de dados inteiro.
 </p>
