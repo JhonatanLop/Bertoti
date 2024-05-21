@@ -1,9 +1,65 @@
-<mxfile host="app.diagrams.net" modified="2024-05-20T23:51:04.748Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" version="24.4.4" etag="dzX6tR2WHhPsbqLWhSGJ" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-21T01:06:25.588Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="lLtF6p98y_DFYZJxImm0" version="24.4.4" type="github">
   <diagram name="Page-1" id="JUuFyAPK8oX2ykOomS8K">
-    <mxGraphModel>
+    <mxGraphModel dx="819" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qbJJzo9aZ9mLPEVX-43y-1" target="qbJJzo9aZ9mLPEVX-43y-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qbJJzo9aZ9mLPEVX-43y-1" target="qbJJzo9aZ9mLPEVX-43y-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qbJJzo9aZ9mLPEVX-43y-1" target="qbJJzo9aZ9mLPEVX-43y-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-1" value="Lanchonete" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="240" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-2" value="&lt;div align=&quot;left&quot;&gt;- pedido: Pedido&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-1">
+          <mxGeometry y="23" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-3" value="&lt;div&gt;+ fazerPedido(&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;pedido: String,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;valor: double,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;pagamento: double&lt;br&gt;&lt;/div&gt;&lt;div&gt;): void&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-1">
+          <mxGeometry y="58" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-4" value="&lt;div&gt;+ enviarCozinha(pedido: Pedido): void&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-1">
+          <mxGeometry y="148" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-5" value="&lt;div&gt;+ fazerPagamento(pedido: Pedido): void&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-1">
+          <mxGeometry y="178" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-6" value="Pedido" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="340" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-7" value="&lt;p style=&quot;line-height: 120%;&quot;&gt;- nome: String&lt;br&gt;- valor: double&lt;br&gt;- pagamento: double&lt;br&gt;- troco: double&lt;br&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-6">
+          <mxGeometry x="11" y="10" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qbJJzo9aZ9mLPEVX-43y-10" target="qbJJzo9aZ9mLPEVX-43y-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-10" value="Cozinha" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="210" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-11" value="- pedido: Pedido" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-10">
+          <mxGeometry x="9" y="30" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-13" value="&lt;div align=&quot;left&quot;&gt;+ fazerPedido(pedido: Pedido): void&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-10">
+          <mxGeometry x="9" y="60" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qbJJzo9aZ9mLPEVX-43y-14" target="qbJJzo9aZ9mLPEVX-43y-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-14" value="Caixa" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="90" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-15" value="- pedido: Pedido" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-14">
+          <mxGeometry x="10" y="30" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qbJJzo9aZ9mLPEVX-43y-16" value="&lt;div align=&quot;left&quot;&gt;+ calcularPagamento(pedido: Pedido): void&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="qbJJzo9aZ9mLPEVX-43y-14">
+          <mxGeometry x="10" y="60" width="260" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
