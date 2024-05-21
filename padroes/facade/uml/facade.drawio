@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-21T01:06:25.588Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="lLtF6p98y_DFYZJxImm0" version="24.4.4" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-21T01:07:13.195Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="l4PYRuITzQyc5P3_qCRO" version="24.4.4" type="github">
   <diagram name="Page-1" id="JUuFyAPK8oX2ykOomS8K">
     <mxGraphModel dx="819" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -37,7 +37,12 @@
           <mxGeometry x="11" y="10" width="130" height="100" as="geometry" />
         </mxCell>
         <mxCell id="qbJJzo9aZ9mLPEVX-43y-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qbJJzo9aZ9mLPEVX-43y-10" target="qbJJzo9aZ9mLPEVX-43y-6">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="260" />
+              <mxPoint x="810" y="390" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="qbJJzo9aZ9mLPEVX-43y-10" value="Cozinha" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="530" y="210" width="240" height="100" as="geometry" />
