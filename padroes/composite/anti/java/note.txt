@@ -1,6 +1,0 @@
-anti
-
-strategy:herança
-observer:um atributo de uma classe ser um objeto de outra classe ao invéz de uma interface
-composite: ter métodos repetidos pra fazer a mesma coisa.
-facade: metodos de longos sem encapsulamento
