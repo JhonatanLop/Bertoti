@@ -22,9 +22,8 @@ public class Lanchonete {
     public void fazerPagamento(Pedido p){
         Caixa c = new Caixa();
         c.setPedido(pedido);
-        c.getTroco(pedido);
 
-        System.out.println("Troco: " + c.getTroco(pedido));
+        System.out.println("Troco: " + p.getTroco());
     }
 
     public static void main(String[] args) {

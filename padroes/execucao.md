@@ -10,9 +10,9 @@ tabela de execução
 | Nome      | patter | anti  | uml - pattern | uml - anti | validado |
 | --------- | ------ | ----- | ------------- | ---------- | -------- |
 | Composite | feito  | feito | feito         | null       | null     |
-| Facade    | null   | null  | null          | null       | null     |
+| Facade    | feito  | null  | feito         | null       | null     |
 | Observer  | feito  | null  | null          | null       | null     |
 | Singleton | feito  | null  | feito         | null       | null     |
 | Strategy  | feito  | null  | feito         | null       | null     |
 
-taxa de conclusão: 40%
+taxa de conclusão: 50%
