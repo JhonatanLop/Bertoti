@@ -1,4 +1,4 @@
-package facade.java;
+package facade.pattern.java;
 
 public class Lanchonete {
     private Pedido pedido;

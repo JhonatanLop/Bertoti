@@ -2,7 +2,7 @@ package observer.pattern.java;
 
 import java.util.ArrayList;
 
-public class Skinao implements Subject{
+public class Skinao{
     private ArrayList<Observer> observers;
     private Pedido pedido;
 

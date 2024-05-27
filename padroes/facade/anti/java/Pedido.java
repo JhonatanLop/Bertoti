@@ -1,4 +1,4 @@
-package facade.java;
+package facade.anti.java;
 
 public class Pedido {
     private String nome;
