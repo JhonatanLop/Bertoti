@@ -8,20 +8,13 @@ public class Lanchonete {
         p.setValor(valor);
         p.setNome(pedido);
         p.setPagamento(pagamento);
-        fazerPagamento(p);
 
-        enviarCozinha(p);
-    }
-
-    public void enviarCozinha(Pedido p){
         Cozinha c = new Cozinha();
         c.setPedido(p);
         c.fazerPedido(p);
-    }
-    
-    public void fazerPagamento(Pedido p){
-        Caixa c = new Caixa();
-        c.setPedido(pedido);
+
+        Caixa cx = new Caixa();
+        cx.setPedido(p);
 
         System.out.println("Troco: " + p.getTroco());
     }

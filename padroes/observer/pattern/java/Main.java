@@ -2,15 +2,16 @@ package observer.pattern.java;
 
 public class Main {
     public static void main(String[] args) {
-        Skinao lanchonete = new Skinao();
-        Caixa caixa = new Caixa();
-        Cozinha cozinha = new Cozinha();
+        Loja loja = new Loja();
 
-        lanchonete.registerObserver(caixa);
-        lanchonete.registerObserver(cozinha);
-        
-        Pedido lanche = new Pedido("Cachorrão brabo", 17.00);
-        
-        lanchonete.notifyObserver(lanche);
+        Cliente cliente1 = new Cliente("João", "joao@gmail.com");
+        Cliente cliente2 = new Cliente("Maria", "maria@gmail.com");
+
+        Produto produto = new Produto("Camiseta", 50.0, 10, loja);
+
+        loja.adicionarCliente(cliente1);
+        loja.adicionarCliente(cliente2);
+    
+        produto.setPreco(45.0);
     }
 }
