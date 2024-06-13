@@ -7,7 +7,6 @@ public class Lanchonete {
         Pedido p = new Pedido(pedido, valor, pagamento);
         p.setValor(valor);
         p.setNome(pedido);
-        p.setPagamento(pagamento);
 
         Cozinha c = new Cozinha();
         c.setPedido(p);
@@ -16,7 +15,7 @@ public class Lanchonete {
         Caixa cx = new Caixa();
         cx.setPedido(p);
 
-        System.out.println("Troco: " + p.getTroco());
+        System.out.println("Troco: " + (pagamento - valor));
     }
 
     public static void main(String[] args) {
