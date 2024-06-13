@@ -5,11 +5,7 @@ public class Lanchonete {
     
     public void fazerPedido(String pedido, double valor, double pagamento){
         Pedido p = new Pedido(pedido, valor, pagamento);
-        p.setValor(valor);
-        p.setNome(pedido);
-        p.setPagamento(pagamento);
-        fazerPagamento(p);
-
+        fazerPagamento(p, pagamento);
         enviarCozinha(p);
     }
 
@@ -19,11 +15,11 @@ public class Lanchonete {
         c.fazerPedido(p);
     }
     
-    public void fazerPagamento(Pedido p){
+    public void fazerPagamento(Pedido p, double pagamento){
         Caixa c = new Caixa();
         c.setPedido(pedido);
 
-        System.out.println("Troco: " + p.getTroco());
+        System.out.println("Troco: " + c.calcularPagamento(p));
     }
 
     public static void main(String[] args) {

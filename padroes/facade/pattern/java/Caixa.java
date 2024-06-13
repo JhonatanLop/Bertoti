@@ -3,9 +3,8 @@ package facade.pattern.java;
 public class Caixa {
     private Pedido pedido;
 
-    public void calcularPagamento(Pedido pedido) {
-        double troco = pedido.getPagamento() - pedido.getValor();
-        pedido.setTroco(troco);
+    public double calcularPagamento(Pedido pedido) {
+        return pedido.getPagamento() - pedido.getValor();
     }
 
     public Pedido getPedido() { return pedido;}
