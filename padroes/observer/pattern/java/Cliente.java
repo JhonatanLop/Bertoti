@@ -1,6 +1,6 @@
 package observer.pattern.java;
 
-public class Cliente {
+public class Cliente implements Observer{
     private String nome;
     private String email;
 

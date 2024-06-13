@@ -1,14 +1,27 @@
-public class Cliente{
+package observer.pattern.java;
 
+public class Cliente {
     private String nome;
-    private String numero;
+    private String email;
 
-    public Cliente(String nome, String numero){
+    public Cliente(String nome, String email) {
         this.nome = nome;
-        this.numero = numero;
+        this.email = email;
     }
-    
-    public String update(){
-        return "o item que você queria chegou";
+
+    public void notificar(Produto produto) {
+        System.out.println("Cliente " + nome + " notificado sobre o produto " + produto.getNome());
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
