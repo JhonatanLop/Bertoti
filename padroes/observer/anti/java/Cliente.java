@@ -1,4 +1,4 @@
-package observer.pattern.java;
+package observer.anti.java;
 
 public class Cliente {
     private String nome;
