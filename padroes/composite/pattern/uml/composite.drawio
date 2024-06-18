@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net" modified="2024-06-18T01:22:11.111Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="dGGCXKDvhzyl88cz5QrJ" version="24.5.5" type="device">
+  <diagram name="Page-1" id="2Mn4pPXClUiaiotB8hKc">
+    <mxGraphModel dx="1434" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-1" value="&lt;div&gt;Component&lt;/div&gt;&lt;div&gt;&amp;lt;Interface&amp;gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=30;" vertex="1" parent="1">
+          <mxGeometry x="363" y="80" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-2" value="&lt;div align=&quot;left&quot;&gt;+ describe(): String&lt;br&gt;+ getName(): String&lt;br&gt;+ getDescription(): String&lt;br&gt;+ getDammage(): Double&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="lP2Q4YVuOcOEGZjelmpK-1">
+          <mxGeometry y="30" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;strokeWidth=2;endArrow=block;endFill=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=-0.015;exitY=0.186;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="lP2Q4YVuOcOEGZjelmpK-5" target="lP2Q4YVuOcOEGZjelmpK-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="463" y="220" as="targetPoint" />
+            <mxPoint x="573" y="300" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-4" value="Sword" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="578" y="260" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-5" value="&lt;div align=&quot;left&quot;&gt;- name: String&lt;br&gt;- description: String&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;- parts: List&amp;lt;Part&amp;gt;&lt;br&gt;- dammage: double&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="lP2Q4YVuOcOEGZjelmpK-4">
+          <mxGeometry y="23" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=open;endFill=0;strokeWidth=2;" edge="1" parent="1" source="lP2Q4YVuOcOEGZjelmpK-7" target="lP2Q4YVuOcOEGZjelmpK-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-7" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="663" y="230" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;dashPattern=8 8;strokeWidth=2;endArrow=block;endFill=0;" edge="1" parent="1" source="lP2Q4YVuOcOEGZjelmpK-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="463" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-9" value="Part" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="73" y="370" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-10" value="- name: String&lt;br&gt;- price: double&lt;br&gt;- description: double&lt;br&gt;- dammage: double" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="lP2Q4YVuOcOEGZjelmpK-9">
+          <mxGeometry y="24" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-11" value="Sword Skill" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="303" y="370" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-12" value="- name: String&lt;br&gt;- effect: String&lt;br&gt;- dammage: double" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="lP2Q4YVuOcOEGZjelmpK-11">
+          <mxGeometry y="23" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lP2Q4YVuOcOEGZjelmpK-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;strokeWidth=2;endArrow=block;endFill=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="lP2Q4YVuOcOEGZjelmpK-11" target="lP2Q4YVuOcOEGZjelmpK-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="220" as="targetPoint" />
+            <mxPoint x="403" y="370" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

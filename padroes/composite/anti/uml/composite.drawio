@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2024-06-18T01:34:31.352Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="MHB4LKZoZ4t1DZEJsjBZ" version="24.5.5" type="device">
+  <diagram name="Page-1" id="mLlrIexJ9fZd_A2HoGhO">
+    <mxGraphModel dx="1434" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cjaMEO1SCx3lNwTHjd5e-4" value="Sword" style="swimlane;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="190" y="310" width="210" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="cjaMEO1SCx3lNwTHjd5e-5" value="&lt;div style=&quot;font-size: 14px;&quot; align=&quot;left&quot;&gt;- name: String&lt;br style=&quot;font-size: 14px;&quot;&gt;- description: String&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot; align=&quot;left&quot;&gt;- parts: List&amp;lt;Part&amp;gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;- dammage: double&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="cjaMEO1SCx3lNwTHjd5e-4" vertex="1">
+          <mxGeometry y="25" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ixdWbMYgPzcq6qW7wgS4-4" value="&lt;div style=&quot;font-size: 14px;&quot;&gt;+describe():void&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;+calculateDammage():double&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" vertex="1" parent="cjaMEO1SCx3lNwTHjd5e-4">
+          <mxGeometry y="99" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ixdWbMYgPzcq6qW7wgS4-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;strokeWidth=2;fontSize=14;" edge="1" parent="1" source="cjaMEO1SCx3lNwTHjd5e-10" target="cjaMEO1SCx3lNwTHjd5e-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjaMEO1SCx3lNwTHjd5e-10" value="Part" style="swimlane;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="190" y="540" width="200" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="cjaMEO1SCx3lNwTHjd5e-11" value="- name: String&lt;br style=&quot;font-size: 14px;&quot;&gt;- price: double&lt;br style=&quot;font-size: 14px;&quot;&gt;- description: double&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;- dammage: double&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;+ describe(): void&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="cjaMEO1SCx3lNwTHjd5e-10" vertex="1">
+          <mxGeometry y="25" width="150" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ixdWbMYgPzcq6qW7wgS4-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;strokeWidth=2;fontSize=14;" edge="1" parent="1" source="cjaMEO1SCx3lNwTHjd5e-13" target="cjaMEO1SCx3lNwTHjd5e-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cjaMEO1SCx3lNwTHjd5e-13" value="Sword Skill" style="swimlane;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="510" y="430" width="200" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="cjaMEO1SCx3lNwTHjd5e-14" value="- name: String&lt;br style=&quot;font-size: 14px;&quot;&gt;- effect: String&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;- dammage: double&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;+ describe():void&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;" parent="cjaMEO1SCx3lNwTHjd5e-13" vertex="1">
+          <mxGeometry y="25" width="140" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

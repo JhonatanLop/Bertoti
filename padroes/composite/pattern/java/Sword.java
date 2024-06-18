@@ -26,6 +26,14 @@ public class Sword implements Component{
         parts.remove(part);
     }
 
+    public double calculateDammage() {
+        double totalDammage = getDammage();
+        for (Component part : parts) {
+            totalDammage += part.getDammage();
+        }
+        return totalDammage;
+    }
+
     public void describe(){
         for (Component part : this.parts) {
             System.out.println(part.getClass());

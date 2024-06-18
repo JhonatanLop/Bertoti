@@ -22,12 +22,15 @@ public class Sword {
         System.out.printf("Dammage: %s\n",getDammage());
     }
 
-    public void addParts(Parts part) {
-        parts.add(part);
-    }
-
-    public void addSkills(SwordSkills skill) {
-        skills.add(skill);
+    public double calculateDammage() {
+        double totalDammage = getDammage();
+        for (Parts part : parts) {
+            totalDammage += part.getDammage();
+        }
+        for (SwordSkills skill : skills) {
+            totalDammage += skill.getDammage();
+        }
+        return totalDammage;
     }
 
     public String getName() { return name; }
