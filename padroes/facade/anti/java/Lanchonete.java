@@ -4,12 +4,13 @@ public class Lanchonete {
     private Pedido pedido;
     
     public void fazerPedido(String pedido, double valor, double pagamento){
-        Pedido p = new Pedido(pedido, valor, pagamento);
-        p.setValor(valor);
-        p.setNome(pedido);
+        Pedido p = new Pedido();
+        p.valor = valor;
+        p.nome = pedido;
+        p.pagamento = pagamento;
 
         Cozinha c = new Cozinha();
-        c.setPedido(p);
+        c.pedido = p;
         c.fazerPedido(p);
 
         Caixa cx = new Caixa();

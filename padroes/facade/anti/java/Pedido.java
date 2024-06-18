@@ -1,16 +1,18 @@
 package facade.anti.java;
 
 public class Pedido {
-    private String nome;
-    private double valor;
-    private double pagamento;
-    private double troco;
+    public String nome;
+    public double valor;
+    public double pagamento;
+    public double troco;
 
     public Pedido(String nome, double valor, double pagamento) {
         this.nome = nome;
         this.valor = valor;
         this.pagamento = pagamento;
     }
+
+    public Pedido() {}
 
     public String getNome() { return nome; }
     public double getValor() { return valor; }

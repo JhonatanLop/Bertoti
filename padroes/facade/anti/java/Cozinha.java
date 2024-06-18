@@ -1,7 +1,7 @@
 package facade.anti.java;
 
 public class Cozinha {
-    private Pedido pedido;
+    public Pedido pedido;
 
     public Cozinha() {}
 

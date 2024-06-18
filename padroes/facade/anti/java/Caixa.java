@@ -1,7 +1,7 @@
 package facade.anti.java;
 
 public class Caixa {
-    private Pedido pedido;
+    public Pedido pedido;
 
     public void calcularPagamento(Pedido pedido) {
         double troco = pedido.getPagamento() - pedido.getValor();
