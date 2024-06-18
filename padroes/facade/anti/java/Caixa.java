@@ -4,8 +4,8 @@ public class Caixa {
     public Pedido pedido;
 
     public void calcularPagamento(Pedido pedido) {
-        double troco = pedido.getPagamento() - pedido.getValor();
-        pedido.setTroco(troco);
+        double troco = pedido.pagamento - pedido.valor;
+        pedido.troco = troco;
     }
 
     public Pedido getPedido() { return pedido;}

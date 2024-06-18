@@ -6,15 +6,6 @@ public class Cozinha {
     public Cozinha() {}
 
     public void fazerPedido(Pedido pedido) {
-        System.out.println("Fazendo pedido :" + pedido.getNome());
+        System.out.println("Fazendo pedido :" + pedido.nome);
     }
-
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
-    }
-
 }
