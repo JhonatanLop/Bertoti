@@ -54,11 +54,9 @@ Trabalho de Aprendizagem a partir de Projeto Integrador (APIs), apresentado à F
   <br>  
 </div>
 
-*Jovem apaixonado pela arte da programação...<br> venho de família humilde em uma cidade do interior do estado de São Paulo sem muito acesso a educação de qualidade. Mas isso não me impediu de ir atrás do meu sonho. Me formei Técnico em Informática aos 17 anos pela Etec de Jaú onde aprendi sobre programação e banco dedados que hoje é minha profissão dos sonhos.*
+*Sou um desenvolvedor Back-End com foco em Banco de Dados e APIs, atualmente cursando Banco de Dados na FATEC São José dos Campos. Minha trajetória na área começou com minha formação técnica em Informática pela Etec de Jaú, onde tive meu primeiro contato com programação e bancos de dados.
 
-*Aos 18 anos me mudei para São José dos Campos para estudar Matemática no Instituto Federal. Lá fiquei por apenas um semestre, após isso decidi voltar para minha área de pertencimento e Escolhi a FATEC a conselho do meu orientado/professor e pela reputação de formar bons profissionais da área. Na Fatec escolhi o curso de Banco de Dados pelo foco em programação Back-End e desenvolvimento de Banco de Dados e APIs.*
-
-*Atualmente estou no quarto semestre com mais da metade do curso completo com planos de me formar em 2025, cada semestre com experiências incríveis e projetos em grupo, grupo esse dos quais hoje são meus melhor. Atualmente estou no quarto semestre e tive várias experiências incríveis desenvolvendo projetos inteiros em grupo através dos trabalhos de Aprendizagem a partir de Projeto Integrador (API's) que é uma característica da fatec<br>*
+Minha experiência acadêmica tem sido marcada por projetos práticos e colaborativos, especialmente no desenvolvimento de sistemas completos por meio da metodologia de Aprendizagem por Projeto Integrador (API). Tenho interesse em soluções eficientes para armazenamento e manipulação de dados, sempre buscando aprimorar minhas habilidades técnicas e contribuir para projetos de alto impacto.*
 
 <div align="center">•
     <a href="https://github.com/JhonatanLop/JhonatanLop"> Github </a> •
